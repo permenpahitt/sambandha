@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://workspace-theta-sandy.vercel.app/sitemap.xml
