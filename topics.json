@@ -1,0 +1,37 @@
+[
+  {
+    "label": "AI + Komunikasi Pembangunan",
+    "size": 38,
+    "group": "pengembangan"
+  },
+  {
+    "label": "AI dalam Teori Komunikasi",
+    "size": 28,
+    "group": "teori"
+  },
+  {
+    "label": "AI + Media Online (Framing)",
+    "size": 22,
+    "group": "media"
+  },
+  {
+    "label": "AI + Produksi Info Publik",
+    "size": 20,
+    "group": "pemerintah"
+  },
+  {
+    "label": "AI + Jurnalisme / Komunikasi Sains",
+    "size": 35,
+    "group": "jurnalisme"
+  },
+  {
+    "label": "AI + Pemasaran / Marketing",
+    "size": 25,
+    "group": "pemasaran"
+  },
+  {
+    "label": "AI + Pendidikan / Literasi",
+    "size": 18,
+    "group": "pendidikan"
+  }
+]

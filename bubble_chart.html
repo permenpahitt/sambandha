@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bubble — Jurnal Komunikasi + AI</title>
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<style>
+  :root {
+    --accent: #7ee787;
+    --card: #1a1f2e;
+    --border: #2a2f3e;
+    --muted-foreground: #9ca3af;
+    --foreground: #e6e6fa;
+  }
+  body { font-family: system-ui, -apple-system, sans-serif; background: #0f1116; color: var(--foreground); margin: 0; padding: 24px; }
+  h1 { font-size: 1.6rem; margin-bottom: 6px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted-foreground); font-size: 0.9rem; margin-bottom: 28px; }
+  #bubble { max-width: 880px; height: 520px; }
+  .label-badge { display: inline-block; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border); background: var(--card); color: var(--accent); font-size: 0.78rem; margin: 4px 4px 0 0; }
+</style>
+</head>
+<body>
+<h1>Bubble — Topik Jurnal Komunikasi + AI</h1>
+<div class="sub">Ukuran bubble ≈ jumlah artikel/relevansi topik (simulasi dari hasil pencarian)</div>
+<div id="bubble"></div>
+
+<div style="margin-top: 18px;">
+  <span class="label-badge">Pengembangan</span>
+  <span class="label-badge">Teori Komunikasi</span>
+  <span class="label-badge">Media / Framing</span>
+  <span class="label-badge">Info Publik / Pemerintah</span>
+  <span class="label-badge">Jurnalisme / Sains</span>
+  <span class="label-badge">Pemasaran</span>
+  <span class="label-badge">Pendidikan / Literasi</span>
+</div>
+
+<script>
+const data = [
+  {x:[1], y:[1], text:["AI + Komunikasi Pembangunan<br>Interaksi (UNDIP) 2025"], mode:"markers+text", marker:{size:55, color:"#7ee787", opacity:0.85, line:{color:"#1a1f2e", width:2}}, textposition:"middle center", textfont:{color:"#0f1116", size:10}, hoverinfo:"text", showlegend:false},
+  {x:[3], y:[2], text:["AI dalam Teori Komunikasi<br>Interaksi (UNDIP) 2024"], mode:"markers+text", marker:{size:45, color:"#a7f3d0", opacity:0.85, line:{color:"#1a1f2e", width:2}}, textposition:"middle center", textfont:{color:"#0f1116", size:9}, hoverinfo:"text", showlegend:false},
+  {x:[5], y:[4], text:["AI + Media Online (Framing)<br>Ultimacomm (UMN) 2025"], mode:"markers+text", marker:{size:38, color:"#bae6fd", opacity:0.85, line:{color:"#1a1f2e", width:2}}, textposition:"middle center", textfont:{color:"#0f1116", size:9}, hoverinfo:"text", showlegend:false},
+  {x:[2], y:[5], text:["AI + Produksi Info Publik<br>Jurnal UHO 2026"], mode:"markers+text", marker:{size:35, color:"#c4b5fd", opacity:0.85, line:{color:"#1a1f2e", width:2}}, textposition:"middle center", textfont:{color:"#0f1116", size:9}, hoverinfo:"text", showlegend:false},
+  {x:[6], y:[3], text:["AI + Jurnalisme / Sains<br>Annals / JCOM 2025-26"], mode:"markers+text", marker:{size:50, color:"#fca5a5", opacity:0.85, line:{color:"#1a1f2e", width:2}}, textposition:"middle center", textfont:{color:"#0f1116", size:10}, hoverinfo:"text", showlegend:false},
+  {x:[4], y:[6], text:["AI + Pemasaran / Marketing<br>Frontiers / Springer 2025"], mode:"markers+text", marker:{size:42, color:"#fcd34d", opacity:0.85, line:{color:"#1a1f2e", width:2}}, textposition:"middle center", textfont:{color:"#0f1116", size:9}, hoverinfo:"text", showlegend:false},
+  {x:[7], y:[1], text:["AI + Pendidikan / Literasi<br>Frontiers / Jurnal Lain 2025-26"], mode:"markers+text", marker:{size:33, color:"#fda4af", opacity:0.85, line:{color:"#1a1f2e", width:2}}, textposition:"middle center", textfont:{color:"#0f1116", size:9}, hoverinfo:"text", showlegend:false},
+];
+
+Plotly.newPlot('bubble', data, {
+  xaxis: {showgrid:false, zeroline:false, visible:false, range:[0,8]},
+  yaxis: {showgrid:false, zeroline:false, visible:false, range:[0,7]},
+  plot_bgcolor:"#0f1116",
+  paper_bgcolor:"#0f1116",
+  margin:{t:20,b:10,l:10,r:10},
+  hovermode:"closest"
+}, {displayModeBar:false});
+</script>
+</body>
+</html>
