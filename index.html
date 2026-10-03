@@ -139,7 +139,7 @@
   function renderAlumni(list){
     const grid = document.getElementById('alumniGrid');
     if(!list.length){grid.innerHTML='<p style="color:var(--muted);font-size:.9rem">Tidak ditemukan.</p>';return;}
-    grid.innerHTML = list.map(a=>`<div class="alumni"><h5>${a.name}</h5><div class="uni">${a.uni}</div><div class="year">Lulus ${a.year}</div><p>${a.bio}</p><a href="#chat" class="btn" onclick="startChat('${a.name}','${a.uni}')">Chat</a></div>`).join('');
+    grid.innerHTML = list.map(a=>`<div class="alumni"><h5>${a.name}</h5><div class="uni">${a.uni}</div><div class="year">Lulus ${a.year}</div><p>${a.bio}</p><a href="#hubungi" class="btn">Hubungi</a></div>`).join('');
   }
   function filterAlumni(){
     const q = document.getElementById('searchInput').value.toLowerCase();
