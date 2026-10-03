@@ -126,16 +126,16 @@
 
 <script>
   const alumni = [
-    {name:"Ziendik Pancar Mudra Wirawan",uni:"ITS (FTEIC)",year:"2023",bio:"Teknik Elektro — mahasiswa aktif. Kontak: @itsjiwira. Salam: 'HALLO TEMAN TEMAN, SILAHKAN BOLEH TANYA TANYA'."},
-    {name:"Eka Azahra Zulsita",uni:"Universitas Tidar",year:"2026",bio:"Fakultas Keguruan dan Ilmu Pendidikan — Pendidikan IPA. Kontak: @zhrasita21. Salam: 'semoga sukses'."},
-    {name:"Muhamad Zidan Muzakki",uni:"Universitas Gadjah Mada (Sekolah Vokasi)",year:"2025",bio:"Teknik Pengelolaan dan Perawatan Alat Berat — mahasiswa aktif. Kontak: IG @zidan__muzakki, LinkedIn zidanmuzakki. Salam: '-'."},
-    {name:"Lukman Muji Isnanto",uni:"Universitas Negeri Semarang (Fak. Ekonomika dan Bisnis)",year:"2026",bio:"S1 Manajemen — mahasiswa aktif. Kontak: LinkedIn lukman-muji-isnanto. Salam: 'Semangat terus broo'."},
+    {name:"Ziendik Pancar Mudra Wirawan",uni:"ITS",fakultas:"FTEIC",jurusan:"Teknik Elektro",year:"2023",kontak:"@itsjiwira",salam:"HALLO TEMAN TEMAN, SILAHKAN BOLEH TANYA TANYA"},
+    {name:"Eka Azahra Zulsita",uni:"Universitas Tidar",fakultas:"Keguruan dan Ilmu Pendidikan",jurusan:"Pendidikan IPA",year:"2026",kontak:"@zhrasita21",salam:"semoga sukses"},
+    {name:"Muhamad Zidan Muzakki",uni:"Universitas Gadjah Mada (Sekolah Vokasi)",fakultas:"Sekolah Vokasi",jurusan:"Teknik Pengelolaan dan Perawatan Alat Berat",year:"2025",kontak:"IG @zidan__muzakki / LinkedIn zidanmuzakki",salam:"-"},
+    {name:"Lukman Muji Isnanto",uni:"Universitas Negeri Semarang",fakultas:"Ekonomika dan Bisnis",jurusan:"S1 Manajemen",year:"2026",kontak:"LinkedIn lukman-muji-isnanto",salam:"Semangat terus broo"},
   ];
 
   function renderAlumni(list){
     const grid = document.getElementById('alumniGrid');
     if(!list.length){grid.innerHTML='<p style="color:var(--muted);font-size:.9rem">Tidak ditemukan.</p>';return;}
-    grid.innerHTML = list.map(a=>`<div class="alumni"><h5>${a.name}</h5><div class="uni">${a.uni}</div><div class="year">Lulus ${a.year}</div><p>${a.bio}</p><a href="#hubungi" class="btn">Hubungi</a></div>`).join('');
+    grid.innerHTML = list.map(a=>`<div class="alumni"><h5>${a.name}</h5><div class="uni">${a.uni}</div><div class="year">${a.fakultas} · ${a.jurusan} · Lulus ${a.year}</div><p>Kontak: ${a.kontak}<br>Salam: "${a.salam}"</p><a href="#hubungi" class="btn">Hubungi</a></div>`).join('');
   }
   function filterAlumni(){
     const q = document.getElementById('searchInput').value.toLowerCase();
