@@ -87,7 +87,16 @@
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(14px);
     }
-    .topnav > a,
+    .wordmark {
+      color: var(--green-deep);
+      font-size: .84rem;
+      font-weight: 700;
+      letter-spacing: .055em;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .header-wordmark { margin-right: auto; padding: 10px 11px; }
+    .topnav > a:not(.wordmark),
     .nav-trigger {
       min-height: 37px;
       padding: 8px 11px;
@@ -101,7 +110,7 @@
       text-decoration: none;
       cursor: pointer;
     }
-    .topnav > a:hover,
+    .topnav > a:not(.wordmark):hover,
     .nav-trigger:hover,
     .nav-dropdown.open .nav-trigger,
     .nav-dropdown:focus-within .nav-trigger {
@@ -363,7 +372,7 @@
       background: var(--orange);
       color: #fff;
     }
-    #kenali-dirimu, #tips-jurusan, #beasiswa, #jalur-masuk, #tka, #jadwal-snpmb, #jalur-alternatif, #tautan-resmi, #latihan { scroll-margin-top: 76px; }
+    #kenali-dirimu, #tips-jurusan, #beasiswa, #jalur-masuk, #tka, #jadwal-snpmb, #jalur-alternatif, #opsi-kerja, #tautan-resmi, #latihan { scroll-margin-top: 76px; }
 
     .self-test-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
     .self-test-card {
@@ -711,6 +720,17 @@
     .route.resource a { display: inline-block; margin-top: 18px; color: var(--yellow); font-weight: 700; text-underline-offset: 4px; }
     .source-label { color: var(--muted); font-size: .76rem; font-weight: 600; }
     .tka-note { margin-top: 12px !important; font-size: .72rem !important; }
+    .work-section { padding-top: 0; }
+    .work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .work-card {
+      min-height: 100%;
+      border-top: 4px solid var(--green);
+      background: var(--surface);
+    }
+    .work-card h3 { margin-top: 0; }
+    .work-card a { color: var(--green-deep); font-weight: 700; text-underline-offset: 4px; }
+    .work-note { margin: 24px 0 0; color: var(--muted); font-size: .86rem; }
+    .work-note a { color: var(--green-deep); font-weight: 700; text-underline-offset: 4px; }
     .practice-section { padding-top: 52px; }
     .practice-section .practice { margin-top: 0; }
     .practice { margin-top: 56px; padding-top: 34px; border-top: 1px solid var(--line); }
@@ -1005,7 +1025,11 @@
     .official-link strong { color: var(--green-deep); font-size: .88rem; }
     .official-link small { margin-top: 9px; color: var(--muted); font-size: .72rem; overflow-wrap: anywhere; }
 
-    footer { padding: 30px 20px 40px; color: var(--muted); font-size: .76rem; text-align: center; }
+    .wordmark:hover { color: var(--orange); }
+    footer { display: grid; gap: 10px; justify-items: center; padding: 30px 20px 40px; color: var(--muted); font-size: .76rem; text-align: center; }
+    footer p { margin: 0; }
+    .footer-wordmark { font-size: .9rem; }
+    .footer-credit { color: var(--muted); font-size: .7rem; }
     .toast {
       position: fixed;
       right: 18px;
@@ -1034,8 +1058,8 @@
       .section-head, .contact-panel, .schedule-head, .practice-head, .alternative-head, .ukt-panel, .faq-layout { grid-template-columns: 1fr; }
       .faq-intro { position: static; }
       .practice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .alternative-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .alternative-card:last-child { grid-column: 1 / -1; }
+      .alternative-grid, .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .alternative-card:last-child, .work-card:last-child { grid-column: 1 / -1; }
       .routes > .route:nth-child(n) { grid-column: span 6; }
       .routes > .route:last-child { grid-column: span 12; }
       .self-test-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1047,8 +1071,9 @@
     }
     @media (max-width: 560px) {
       .wrap { width: min(100% - 28px, 1180px); }
-      .topnav { justify-content: center; padding-inline: 8px; overflow: visible; }
-      .topnav > a, .nav-trigger { padding-inline: 8px; font-size: .76rem; white-space: nowrap; }
+      .topnav { flex-wrap: wrap; justify-content: center; padding-inline: 8px; overflow: visible; }
+      .header-wordmark { width: 100%; margin-right: 0; padding: 4px 8px 2px; }
+      .topnav > a:not(.wordmark), .nav-trigger { padding-inline: 8px; font-size: .76rem; white-space: nowrap; }
       .dropdown-menu { left: -8px; }
       h1 { font-size: clamp(3.1rem, 18vw, 4.6rem); }
       .hero { padding-block: 44px 62px; gap: 14px; }
@@ -1073,9 +1098,9 @@
       .countdown-short { display: inline; }
       .countdown-note { max-width: 100%; font-size: .64rem; }
       .practice, .schedule { margin-top: 42px; }
-      .self-test-grid, .practice-grid, .book-grid, .schedule-grid, .official-links, .decision-cards, .scholarship-grid, .alternative-grid { grid-template-columns: 1fr; }
+      .self-test-grid, .practice-grid, .book-grid, .schedule-grid, .official-links, .decision-cards, .scholarship-grid, .alternative-grid, .work-grid { grid-template-columns: 1fr; }
       .alternative-card.featured { grid-template-columns: 1fr; gap: 4px; }
-      .alternative-card:last-child { grid-column: auto; }
+      .alternative-card:last-child, .work-card:last-child { grid-column: auto; }
       .alternative-panel { padding: 26px 20px; }
       .school-list { grid-template-columns: 1fr; }
       .skd-practice-link { grid-template-columns: 1fr; gap: 2px; }
@@ -1104,8 +1129,9 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
   <nav class="topnav" aria-label="Navigasi utama">
+    <a class="wordmark header-wordmark" href="#top">SAMBANDHA-SMANCA</a>
     <div class="nav-dropdown" id="campusNavDropdown">
       <button class="nav-trigger" id="campusNavTrigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="campusNavMenu">
         Perguruan tinggi <span class="nav-chevron" aria-hidden="true"></span>
@@ -1118,6 +1144,7 @@
         <a href="#jadwal-snpmb">Jadwal SNPMB</a>
         <a href="#tautan-resmi">Tautan Resmi</a>
         <a href="#jalur-alternatif">Kedinasan &amp; Jalur Non-PTN</a>
+        <a href="#opsi-kerja">Opsi Kerja</a>
         <a href="#latihan">Rekomendasi Belajar</a>
       </div>
     </div>
@@ -1603,6 +1630,47 @@
       </div>
     </section>
 
+    <section class="section work-section" id="opsi-kerja" aria-labelledby="opsi-kerja-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2 id="opsi-kerja-title">Opsi Kerja</h2>
+          </div>
+          <p>Kuliah bukan satu-satunya jalan. Buat yang mau langsung kerja setelah lulus — atau sambil kuliah — ini tiga jalur utama yang realistis buat lulusan SMA:</p>
+        </div>
+        <div class="work-grid">
+          <article class="route work-card">
+            <h3>Kerja Kantoran</h3>
+            <p>Posisi yang terbuka buat lulusan SMA: admin, customer service, sales, operator produksi, kurir/logistik, barista, dan lainnya.</p>
+            <ul class="route-details">
+              <li>Bikin CV yang rapi + profil LinkedIn</li>
+              <li>Lamar lewat platform: <a href="https://www.jobstreet.co.id" target="_blank" rel="noopener">JobStreet</a>, <a href="https://glints.com/id" target="_blank" rel="noopener">Glints</a>, <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li>Siapkan diri untuk tes dan interview — pelajari perusahaannya dulu.</li>
+            </ul>
+          </article>
+          <article class="route work-card">
+            <h3>Freelance</h3>
+            <p>Dibayar per proyek, waktu fleksibel. Skill yang laku: desain grafis, video editing, tulis artikel/copywriting, admin media sosial, programming.</p>
+            <ul class="route-details">
+              <li>Bangun portofolio — kumpulkan hasil kerjamu, sekecil apapun</li>
+              <li>Cari proyek di: <a href="https://www.sribulancer.com" target="_blank" rel="noopener">Sribulancer</a>, <a href="https://projects.co.id" target="_blank" rel="noopener">Projects.co.id</a>, Fiverr, Upwork</li>
+              <li>Mulai dari tarif kecil untuk membangun reputasi dan review.</li>
+            </ul>
+          </article>
+          <article class="route work-card">
+            <h3>Wirausaha</h3>
+            <p>Mulai usaha sendiri, sekecil apapun. Contoh: kuliner, fashion/thrift, jasa (laundry, potong rambut), reseller.</p>
+            <ul class="route-details">
+              <li>Mulai dari yang kamu kuasai dengan modal kecil</li>
+              <li>Pasarkan lewat media sosial dan marketplace (Shopee, Tokopedia, TikTok Shop)</li>
+              <li>Pisahkan uang usaha dan uang pribadi sejak hari pertama.</li>
+            </ul>
+          </article>
+        </div>
+        <p class="work-note">Kenalan dengan alumni yang sudah bekerja, wirausaha, atau freelance lewat <a href="#alumni">direktori alumni</a> — tanya pengalaman mereka langsung.</p>
+      </div>
+    </section>
+
     <section class="section alt practice-section">
       <div class="wrap">
         <section class="practice" id="latihan" aria-labelledby="practice-title">
@@ -1758,7 +1826,11 @@
     </section>
   </main>
 
-  <footer>Proyek Expo Kampus SMA Negeri 1 Candimulyo, Magelang · Data direktori dari alumni yang berpartisipasi.</footer>
+  <footer>
+    <a class="wordmark footer-wordmark" href="#top">SAMBANDHA-SMANCA</a>
+    <p class="footer-credit">© 2026 Sambandha SMANCA · vBeta</p>
+    <p>Proyek Expo Kampus SMA Negeri 1 Candimulyo, Magelang · Data direktori dari alumni yang berpartisipasi.</p>
+  </footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
