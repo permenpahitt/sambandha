@@ -1,0 +1,1931 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:,">
+  <title>Sambandha SMANCA — Alumni Hub SMA Negeri 1 Candimulyo, Magelang</title>
+  <meta name="description" content="Sambandha SMANCA: alumni hub SMA Negeri 1 Candimulyo, Magelang. Jalur masuk perguruan tinggi (SNBT, SNBP, Mandiri, Swasta) dan kontak alumni ITS, UGM, UPNVY, UNDIP, dll.">
+  <meta name="keywords" content="sambandha smanca, sambandha-smanca, smanca, alumni sma negeri 1 candimulyo, magelang, snbt, snbp, perguruan tinggi">
+  <meta name="author" content="Sambandha SMANCA">
+  <link rel="canonical" href="https://workspace-theta-sandy.vercel.app/sambandha-smanca">
+  <meta property="og:title" content="Sambandha SMANCA — Alumni Hub SMA Negeri 1 Candimulyo, Magelang">
+  <meta property="og:description" content="Hub alumni SMA Negeri 1 Candimulyo, Magelang — jalur perguruan tinggi dan kontak alumni.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://workspace-theta-sandy.vercel.app/sambandha-smanca">
+  <meta property="og:site_name" content="Sambandha SMANCA">
+  <meta property="og:image" content="https://workspace-theta-sandy.vercel.app/og-sambandha.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sambandha SMANCA">
+  <meta name="twitter:description" content="Alumni hub SMA Negeri 1 Candimulyo, Magelang — jalur perguruan tinggi dan kontak alumni.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Sambandha SMANCA","alternateName":["sambandha-smanca","SAMBANDHA SMANCA"],"url":"https://workspace-theta-sandy.vercel.app/sambandha-smanca","description":"Alumni hub SMA Negeri 1 Candimulyo, Magelang untuk jalur perguruan tinggi dan relasi alumni."}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #f2f3ed;
+      --surface: #ffffff;
+      --surface-soft: #e8ece5;
+      --ink: #17211b;
+      --muted: #536057;
+      --line: #cbd2ca;
+      --green: #0b684d;
+      --green-deep: #064b38;
+      --green-soft: #d4e9de;
+      --orange: #d75d2a;
+      --yellow: #f3c64e;
+      --shadow: 0 18px 45px rgba(27, 45, 35, .09);
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Work Sans", system-ui, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #101713;
+        --surface: #18211c;
+        --surface-soft: #202b25;
+        --ink: #edf4ef;
+        --muted: #b1bcb4;
+        --line: #38463d;
+        --green: #59c99e;
+        --green-deep: #a2e4ca;
+        --green-soft: #183d30;
+        --orange: #ef8859;
+        --yellow: #eec75e;
+        --shadow: 0 18px 45px rgba(0, 0, 0, .24);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+    }
+    button, input { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+    .topnav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      padding: 10px max(18px, calc((100vw - 1180px) / 2));
+      background: color-mix(in srgb, var(--page) 91%, transparent);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .topnav > a,
+    .nav-trigger {
+      min-height: 37px;
+      padding: 8px 11px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      font-size: .84rem;
+      font-weight: 600;
+      line-height: 1.55;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .topnav > a:hover,
+    .nav-trigger:hover,
+    .nav-dropdown.open .nav-trigger,
+    .nav-dropdown:focus-within .nav-trigger {
+      color: var(--green-deep);
+      background: var(--green-soft);
+    }
+    .nav-dropdown { position: relative; }
+    .nav-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+    .nav-chevron {
+      width: 7px;
+      height: 7px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+      transition: transform .16s ease;
+    }
+    .nav-dropdown.open .nav-chevron { transform: translateY(2px) rotate(225deg); }
+    .dropdown-menu[hidden] { display: none; }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 30;
+      display: grid;
+      width: min(290px, calc(100vw - 24px));
+      padding: 8px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-5px);
+      transition: opacity .16s ease, transform .16s ease, visibility .16s;
+    }
+    .dropdown-menu a {
+      padding: 9px 11px;
+      border-radius: 6px;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 600;
+      line-height: 1.35;
+      text-decoration: none;
+    }
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible { color: var(--green-deep); background: var(--green-soft); }
+    .nav-dropdown.open .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    main { overflow: hidden; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
+      gap: clamp(28px, 6vw, 84px);
+      align-items: center;
+      min-height: 620px;
+      padding-block: 74px 88px;
+    }
+    .hero-copy { position: relative; z-index: 2; }
+    .context {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--green-deep);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .context::before { content: ""; width: 34px; height: 3px; background: var(--orange); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-family: var(--serif);
+      font-size: clamp(3.2rem, 7vw, 6.7rem);
+      font-weight: 650;
+      letter-spacing: -.055em;
+      line-height: .91;
+    }
+    .hero-copy > p:not(.context) {
+      max-width: 650px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.18rem);
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 11px 17px;
+      border: 1px solid var(--green-deep);
+      border-radius: 9px;
+      background: var(--green-deep);
+      color: var(--page);
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .18s ease, color .18s ease;
+    }
+    .button:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+    .button.secondary { background: transparent; color: var(--green-deep); }
+    .button.secondary:hover { background: var(--green-soft); border-color: var(--green); }
+    .button.whatsapp { border-color: #167c55; background: #167c55; color: #fff; }
+    .button.whatsapp:hover { border-color: #126644; background: #126644; color: #fff; }
+    .button svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .button.whatsapp svg { fill: currentColor; stroke: none; }
+    .contact-share { margin-top: 22px; }
+    .contact-panel .button.whatsapp { background: var(--yellow); border-color: var(--yellow); color: #173c2d; }
+    .contact-panel .button.whatsapp:hover { background: #fff; border-color: #fff; color: #173c2d; }
+
+    .hero-art {
+      position: relative;
+      min-height: 445px;
+      isolation: isolate;
+    }
+    .sun {
+      position: absolute;
+      right: 12%;
+      top: 0;
+      width: 170px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--yellow);
+      z-index: -2;
+    }
+    .campus-frame {
+      position: absolute;
+      inset: 48px 0 16px 7%;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      border-radius: 36% 36% 8px 8px;
+      background: var(--green);
+      box-shadow: var(--shadow);
+    }
+    .campus-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(110deg, transparent 0 28px, color-mix(in srgb, var(--surface) 8%, transparent) 28px 30px);
+    }
+    .campus {
+      position: relative;
+      width: 100%;
+      height: auto;
+      color: var(--page);
+    }
+    .note-card {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: min(240px, 60%);
+      padding: 18px 20px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      transform: rotate(-2deg);
+    }
+    .note-card strong { display: block; font-family: var(--serif); font-size: 1.4rem; line-height: 1; }
+    .note-card span { display: block; margin-top: 7px; color: var(--muted); font-size: .8rem; }
+
+    .school-strip {
+      display: grid;
+      grid-template-columns: minmax(220px, .75fr) minmax(0, 1.25fr) auto;
+      gap: clamp(22px, 4vw, 54px);
+      align-items: center;
+      margin-top: -28px;
+      padding: 24px 28px;
+      background: var(--green-deep);
+      color: var(--page);
+      box-shadow: var(--shadow);
+    }
+    .school-strip h2 {
+      margin: 0 0 5px;
+      font-size: clamp(1.55rem, 2.3vw, 2.15rem);
+      letter-spacing: -.025em;
+      line-height: 1;
+    }
+    .school-strip .school-note {
+      margin: 0;
+      color: color-mix(in srgb, var(--page) 72%, transparent);
+      font-size: .78rem;
+    }
+    .school-facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin: 0;
+    }
+    .school-facts div { min-width: 0; }
+    .school-facts dt {
+      margin-bottom: 3px;
+      color: color-mix(in srgb, var(--page) 62%, transparent);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .school-facts dd { margin: 0; font-size: .8rem; font-weight: 600; line-height: 1.35; }
+    .school-site {
+      white-space: nowrap;
+      color: var(--yellow);
+      font-size: .78rem;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+
+    .section { padding-block: 86px; }
+    .section.alt { background: var(--surface); }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .65fr) minmax(280px, .35fr);
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 40px;
+    }
+    .eyebrow { margin-bottom: 9px; color: var(--orange); font-size: .78rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+    h2 { margin-bottom: 0; font-family: var(--serif); font-size: clamp(2.25rem, 4.8vw, 4.3rem); line-height: .98; letter-spacing: -.035em; }
+    .section-head > p { margin-bottom: 4px; color: var(--muted); font-size: .95rem; }
+    .section-subnav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: -16px 0 28px;
+    }
+    .section-subnav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid var(--orange);
+      border-radius: 999px;
+      color: var(--green-deep);
+      font-size: .76rem;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .section-subnav a:first-child {
+      border-color: var(--green-deep);
+      background: var(--green-deep);
+      color: var(--page);
+    }
+    .section-subnav a:hover {
+      border-color: var(--orange);
+      background: var(--orange);
+      color: #fff;
+    }
+    #kenali-dirimu, #tips-jurusan, #beasiswa, #jalur-masuk, #tka, #jadwal-snpmb, #jalur-alternatif, #tautan-resmi, #latihan { scroll-margin-top: 76px; }
+
+    .self-test-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .self-test-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 238px;
+      padding: 22px;
+      border-top: 4px solid var(--green);
+      background: var(--surface);
+      text-decoration: none;
+      transition: background .18s ease, border-color .18s ease;
+    }
+    .self-test-card:hover { border-color: var(--orange); background: var(--green-soft); }
+    .self-test-number { color: var(--orange); font-family: var(--serif); font-size: 1rem; font-weight: 650; }
+    .self-test-card h3 { margin: 28px 0 7px; font-family: var(--serif); font-size: 1.55rem; line-height: 1.05; }
+    .self-test-source { margin: 0 0 12px; color: var(--green-deep); font-size: .78rem; font-weight: 700; }
+    .self-test-description { margin: 0; color: var(--muted); font-size: .82rem; }
+    .self-test-action { margin-top: auto; padding-top: 20px; color: var(--green-deep); font-size: .76rem; font-weight: 700; }
+    .self-test-note { max-width: 850px; margin: 22px 0 0; color: var(--muted); font-size: .84rem; }
+
+    .decision-section { padding-top: 0; }
+    .decision-guide {
+      display: grid;
+      grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+      border-top: 5px solid var(--orange);
+      background: var(--green-deep);
+      color: var(--page);
+      box-shadow: var(--shadow);
+    }
+    .decision-intro { padding: clamp(28px, 5vw, 54px); }
+    .decision-intro .eyebrow { color: var(--yellow); }
+    .decision-intro h2 { max-width: 520px; color: inherit; }
+    .decision-intro > p:last-child { max-width: 480px; margin: 22px 0 0; color: color-mix(in srgb, var(--page) 76%, transparent); font-size: .9rem; }
+    .decision-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .decision-card { min-width: 0; padding: 26px; border-left: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .decision-card:nth-child(n+3) { border-bottom: 0; }
+    .decision-card h3 { margin: 8px 0 13px; font-family: var(--serif); font-size: 1.45rem; line-height: 1.08; }
+    .decision-card p { margin-bottom: 0; color: var(--muted); font-size: .8rem; }
+    .decision-label { color: var(--orange); font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .decision-list, .decision-steps { margin: 13px 0 0; padding: 0; list-style: none; }
+    .decision-list li { position: relative; margin-top: 8px; padding-left: 15px; color: var(--muted); font-size: .78rem; line-height: 1.4; }
+    .decision-list li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+    .triangle-points { display: grid; gap: 8px; margin-top: 13px; }
+    .triangle-point { display: grid; grid-template-columns: 82px minmax(0, 1fr); gap: 10px; color: var(--muted); font-size: .78rem; line-height: 1.4; }
+    .triangle-point strong { color: var(--green-deep); }
+    .decision-steps { counter-reset: steps; }
+    .decision-steps li { counter-increment: steps; display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 9px; margin-top: 9px; color: var(--muted); font-size: .78rem; line-height: 1.4; }
+    .decision-steps li::before { content: counter(steps); display: grid; place-items: center; width: 22px; height: 22px; background: var(--green-soft); color: var(--green-deep); font-size: .68rem; font-weight: 700; }
+    .decision-card a { color: var(--green-deep); font-weight: 700; text-underline-offset: 3px; }
+
+    .scholarship-section { padding-top: 0; }
+    .scholarship-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .scholarship-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--green);
+      background: var(--surface);
+    }
+    .scholarship-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: minmax(220px, .7fr) minmax(0, 1.3fr);
+      gap: clamp(26px, 5vw, 60px);
+      border-top-color: var(--orange);
+      background: var(--green-deep);
+      color: var(--page);
+    }
+    .scholarship-kicker {
+      color: var(--orange);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .scholarship-card.featured .scholarship-kicker { color: var(--yellow); }
+    .scholarship-card h3 {
+      margin: 10px 0 8px;
+      font-family: var(--serif);
+      font-size: clamp(1.55rem, 2.8vw, 2.25rem);
+      line-height: 1.05;
+    }
+    .scholarship-card > div > p,
+    .scholarship-card > p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .84rem;
+    }
+    .scholarship-card.featured > div > p,
+    .scholarship-card.featured > p,
+    .scholarship-card.featured li { color: color-mix(in srgb, var(--page) 78%, transparent); }
+    .scholarship-details {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .scholarship-details li {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 16px;
+      color: var(--muted);
+      font-size: .8rem;
+      line-height: 1.48;
+    }
+    .scholarship-details li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .58em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+    .scholarship-card.featured .scholarship-details li::before { background: var(--yellow); }
+    .scholarship-link {
+      display: inline-flex;
+      align-self: flex-start;
+      margin-top: 20px;
+      color: var(--green-deep);
+      font-size: .78rem;
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+    .scholarship-card.featured .scholarship-link { color: var(--yellow); }
+    .scholarship-note {
+      margin: 22px 0 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--orange);
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: .84rem;
+    }
+    .scholarship-note strong { color: var(--ink); }
+    .ukt-panel {
+      display: grid;
+      grid-template-columns: minmax(200px, .34fr) minmax(0, .66fr);
+      gap: clamp(24px, 5vw, 60px);
+      margin-top: 22px;
+      padding: clamp(24px, 4vw, 38px);
+      border-top: 4px solid var(--orange);
+      background: var(--surface-soft);
+    }
+    .ukt-panel h3 {
+      margin: 7px 0 0;
+      color: var(--green-deep);
+      font-family: var(--serif);
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+      line-height: 1.05;
+    }
+    .ukt-list { margin: 0; padding: 0; list-style: none; }
+    .ukt-list li {
+      position: relative;
+      padding: 13px 0 13px 22px;
+      color: var(--muted);
+      font-size: .84rem;
+      line-height: 1.52;
+    }
+    .ukt-list li + li { border-top: 1px solid var(--line); }
+    .ukt-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.32em;
+      width: 8px;
+      height: 8px;
+      background: var(--orange);
+    }
+    .ukt-list strong { color: var(--ink); }
+
+    .alternative-section { padding-top: 0; }
+    .alternative-panel {
+      padding: clamp(28px, 5vw, 56px);
+      border-top: 5px solid var(--orange);
+      background: var(--green-deep);
+      color: var(--page);
+      box-shadow: var(--shadow);
+    }
+    .alternative-head {
+      display: grid;
+      grid-template-columns: minmax(0, .7fr) minmax(280px, .3fr);
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+    .alternative-head .eyebrow { color: var(--yellow); }
+    .alternative-head h2 { color: inherit; }
+    .alternative-head > p {
+      margin: 0 0 4px;
+      color: color-mix(in srgb, var(--page) 76%, transparent);
+      font-size: .9rem;
+    }
+    .alternative-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .alternative-card {
+      min-width: 0;
+      padding: 24px;
+      background: var(--surface);
+      color: var(--ink);
+    }
+    .alternative-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr);
+      gap: clamp(24px, 5vw, 58px);
+      border-top: 4px solid var(--yellow);
+    }
+    .alternative-number {
+      color: var(--orange);
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 650;
+    }
+    .alternative-card h3 {
+      margin: 13px 0 10px;
+      font-family: var(--serif);
+      font-size: clamp(1.55rem, 2.8vw, 2.25rem);
+      line-height: 1.04;
+    }
+    .alternative-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+    .alternative-card .route-details { margin-top: 15px; }
+    .alternative-card .route-details li { font-size: .78rem; }
+    .alternative-card a {
+      color: var(--green-deep);
+      font-weight: 700;
+      text-underline-offset: 4px;
+    }
+    .school-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 20px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .school-list li {
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .75rem;
+      line-height: 1.42;
+    }
+    .school-list strong { color: var(--ink); }
+    .formation-box {
+      margin-top: 17px;
+      padding: 15px 17px;
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: .77rem;
+      line-height: 1.48;
+    }
+    .formation-box strong { color: var(--ink); }
+    .deadline-note {
+      margin-top: 18px !important;
+      padding: 15px 17px;
+      border-left: 4px solid var(--orange);
+      background: var(--surface-soft);
+    }
+    .alternative-source {
+      display: inline-flex;
+      margin-top: 18px;
+      font-size: .76rem;
+    }
+    .tni-portals { margin-top: 18px; }
+    .tni-portals > strong { display: block; color: var(--ink); font-size: .76rem; }
+    .tni-portal-links { display: flex; flex-wrap: wrap; gap: 8px 15px; }
+    .tni-portal-links .alternative-source { margin-top: 7px; }
+    .skd-practice { margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line); }
+    .skd-practice > strong { display: block; color: var(--ink); font-size: .76rem; }
+    .skd-practice-links { display: grid; gap: 8px; margin-top: 9px; }
+    .skd-practice-link { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 7px; align-items: baseline; }
+    .skd-practice-link a { font-size: .76rem; }
+    .skd-practice-link span { color: var(--muted); font-size: .76rem; line-height: 1.42; }
+    .alternative-warning {
+      margin: 18px 0 0;
+      padding: 18px 20px;
+      border: 1px solid color-mix(in srgb, var(--page) 28%, transparent);
+      color: color-mix(in srgb, var(--page) 82%, transparent);
+      font-size: .82rem;
+    }
+    .alternative-warning strong { color: var(--yellow); }
+
+    .routes { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .route {
+      position: relative;
+      min-height: 260px;
+      padding: 25px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--page);
+    }
+    .routes > .route:nth-child(1), .routes > .route:nth-child(2) { grid-column: span 6; }
+    .routes > .route:nth-child(n+3) { grid-column: span 6; min-height: 225px; }
+    .route-number { color: var(--orange); font-family: var(--serif); font-size: 1rem; font-weight: 650; }
+    .route h3 { max-width: 80%; margin: 34px 0 12px; font-family: var(--serif); font-size: clamp(1.65rem, 3vw, 2.35rem); line-height: 1; }
+    .route p { margin: 0; color: var(--muted); font-size: .89rem; }
+    .route-details { margin: 17px 0 0; padding: 0; list-style: none; }
+    .route-details li {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 16px;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.45;
+    }
+    .route-details li::before { content: ""; position: absolute; left: 0; top: .58em; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+    .source-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 18px; }
+    .source-links a { color: var(--green-deep); font-size: .76rem; font-weight: 700; text-underline-offset: 4px; }
+    .campus-links { margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line); }
+    .campus-links > strong { display: block; margin-bottom: 8px; color: var(--ink); font-size: .76rem; }
+    .campus-link { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 14px; padding-block: 9px; }
+    .campus-link + .campus-link { border-top: 1px solid var(--line); }
+    .campus-link span { color: var(--muted); font-size: .72rem; line-height: 1.4; }
+    .campus-link-nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 10px; grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+    .campus-link a { color: var(--green-deep); font-size: .72rem; font-weight: 700; text-underline-offset: 3px; }
+    .route-mark {
+      position: absolute;
+      right: -23px;
+      top: -28px;
+      width: 125px;
+      height: 125px;
+      border: 20px solid var(--green-soft);
+      border-radius: 50%;
+    }
+    .route.resource { background: var(--green-deep); color: var(--page); border-color: var(--green-deep); }
+    .route.resource p { color: color-mix(in srgb, var(--page) 75%, transparent); }
+    .route.resource a { display: inline-block; margin-top: 18px; color: var(--yellow); font-weight: 700; text-underline-offset: 4px; }
+    .source-label { color: var(--muted); font-size: .76rem; font-weight: 600; }
+    .tka-note { margin-top: 12px !important; font-size: .72rem !important; }
+    .practice-section { padding-top: 52px; }
+    .practice-section .practice { margin-top: 0; }
+    .practice { margin-top: 56px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .practice-head { display: grid; grid-template-columns: minmax(0, .7fr) minmax(260px, .3fr); gap: 24px; align-items: end; margin-bottom: 22px; }
+    .practice-head h3 { margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1; }
+    .practice-note { margin: 0; color: var(--muted); font-size: .84rem; }
+    .practice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .practice-grid .route { min-height: 245px; }
+    .book-block { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+    .book-block h4 { margin: 0 0 14px; color: var(--green-deep); font-family: var(--serif); font-size: 1.45rem; }
+    .book-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .book-card { min-width: 0; padding: 20px; border-top: 3px solid var(--orange); background: var(--surface-soft); }
+    .book-card h5 { margin: 0 0 6px; font-family: var(--serif); font-size: 1.16rem; line-height: 1.12; }
+    .book-credit { margin: 0 0 10px; color: var(--green-deep); font-size: .76rem; font-weight: 700; }
+    .book-card p:last-child { margin: 0; color: var(--muted); font-size: .8rem; }
+    .offline-card { display: block; color: inherit; text-decoration: none; transition: background .18s ease, border-color .18s ease; }
+    .offline-card:hover { border-top-color: var(--green); background: var(--green-soft); }
+    .book-note { margin: 13px 0 0; color: var(--muted); font-size: .78rem; }
+
+    .route-title-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px 12px;
+      max-width: 88%;
+      margin: 34px 0 5px;
+    }
+    .route-title-row h3 { max-width: none; margin: 0; }
+    .countdown-pill {
+      display: inline-flex;
+      flex: none;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: var(--green-deep);
+      color: var(--page);
+      font-size: .7rem;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .countdown-short { display: none; }
+    .countdown-note {
+      max-width: 88%;
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: .66rem;
+      line-height: 1.35;
+    }
+    .schedule { margin-top: 56px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .schedule-head { display: grid; grid-template-columns: minmax(0, .7fr) minmax(260px, .3fr); gap: 24px; align-items: end; margin-bottom: 22px; }
+    .schedule h3 { margin: 0; font-family: var(--serif); font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1; }
+    .schedule-note { margin: 0; color: var(--muted); font-size: .84rem; }
+    .schedule-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .schedule-column { padding: 24px; background: var(--surface-soft); }
+    .schedule-column h4 { margin: 0 0 20px; color: var(--green-deep); font-family: var(--serif); font-size: 1.45rem; }
+    .timeline { margin: 0; padding: 0; list-style: none; }
+    .timeline li { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; padding: 0 0 16px 20px; border-left: 1px solid var(--line); font-size: .82rem; }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before { content: ""; position: absolute; left: -5px; top: 4px; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); }
+    .timeline strong { font-weight: 600; }
+    .timeline time { color: var(--muted); white-space: nowrap; }
+    .schedule .source-links { margin-top: 20px; }
+
+    .story-section { padding-top: 0; }
+    .story-categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: -10px 0 28px;
+    }
+    .story-category {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 700;
+    }
+    .story-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+    .story-guide {
+      padding: clamp(26px, 4vw, 42px);
+      border-top: 4px solid var(--orange);
+      background: var(--surface);
+    }
+    .story-guide h3,
+    .story-empty h3 {
+      margin: 8px 0 18px;
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.35rem);
+      line-height: 1.05;
+    }
+    .story-guide-label {
+      color: var(--orange);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .story-template {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: story-part;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+    .story-template li {
+      counter-increment: story-part;
+      min-width: 0;
+      padding: 20px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .story-template li::before {
+      content: "0" counter(story-part);
+      display: block;
+      margin-bottom: 12px;
+      color: var(--orange);
+      font-family: var(--serif);
+      font-weight: 650;
+    }
+    .story-template strong { display: block; margin-bottom: 5px; color: var(--ink); }
+    .story-template span { display: block; color: var(--muted); font-size: .78rem; line-height: 1.45; }
+    .story-empty {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(26px, 4vw, 42px);
+      background: var(--green-deep);
+      color: var(--page);
+    }
+    .story-empty .story-guide-label { color: var(--yellow); }
+    .story-empty p { margin-bottom: 0; color: color-mix(in srgb, var(--page) 76%, transparent); font-size: .84rem; }
+    .story-empty a { color: var(--yellow); font-weight: 700; text-underline-offset: 4px; }
+
+    .directory-head { margin-bottom: 30px; }
+    .directory-tools {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .search-wrap { position: relative; }
+    .search-wrap svg { position: absolute; left: 16px; top: 50%; width: 20px; transform: translateY(-50%); fill: none; stroke: var(--muted); stroke-width: 2; pointer-events: none; }
+    #searchInput {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 16px 13px 49px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: var(--page);
+      color: var(--ink);
+    }
+    #searchInput::placeholder { color: var(--muted); }
+    .result-count { min-width: 136px; color: var(--muted); font-size: .85rem; text-align: right; }
+    .alumni-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .alumni-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 22px;
+      border-top: 4px solid var(--green);
+      background: var(--surface-soft);
+    }
+    .alumni-card h3 { margin: 0 0 12px; font-family: var(--serif); font-size: 1.42rem; line-height: 1.08; }
+    .campus-name { margin: 0 0 4px; color: var(--green-deep); font-size: .84rem; font-weight: 700; }
+    .study { margin: 0; color: var(--muted); font-size: .84rem; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0; }
+    .tag { padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: .7rem; font-weight: 600; }
+    .greeting { margin: 0 0 16px; color: var(--muted); font-size: .82rem; font-style: italic; }
+    .contact-row { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 14px; border-top: 1px solid var(--line); }
+    .contact-text { min-width: 0; flex: 1; overflow-wrap: anywhere; font-size: .76rem; font-weight: 600; }
+    .copy-btn {
+      flex: none;
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--surface);
+      color: var(--green-deep);
+      font-size: .72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .copy-btn:hover { border-color: var(--green); background: var(--green-soft); }
+    .empty { grid-column: 1 / -1; padding: 40px; border: 1px dashed var(--line); color: var(--muted); text-align: center; }
+
+    .faq-section { padding-top: 0; }
+    .faq-layout {
+      display: grid;
+      grid-template-columns: minmax(240px, .34fr) minmax(0, .66fr);
+      gap: clamp(28px, 6vw, 76px);
+      align-items: start;
+    }
+    .faq-intro { position: sticky; top: 82px; }
+    .faq-intro .eyebrow { margin-bottom: 10px; }
+    .faq-intro h2 { font-size: clamp(2.25rem, 4.4vw, 3.8rem); }
+    .faq-intro p:last-child { margin: 18px 0 0; color: var(--muted); font-size: .88rem; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary {
+      position: relative;
+      padding: 21px 48px 21px 0;
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: clamp(1.12rem, 2vw, 1.38rem);
+      font-weight: 650;
+      line-height: 1.2;
+      list-style: none;
+      cursor: pointer;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid var(--line);
+      color: var(--green-deep);
+      font-family: var(--sans);
+      font-size: 1.15rem;
+      font-weight: 500;
+      line-height: 1;
+      transform: translateY(-50%);
+    }
+    .faq-item[open] summary::after { content: "−"; border-color: var(--green); background: var(--green-soft); }
+    .faq-item summary:hover { color: var(--green-deep); }
+    .faq-item p { max-width: 760px; margin: -3px 48px 21px 0; color: var(--muted); font-size: .86rem; }
+    .faq-item p strong { color: var(--ink); }
+
+    .contact-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(340px, 1.2fr);
+      gap: clamp(32px, 8vw, 110px);
+      padding: clamp(34px, 6vw, 70px);
+      overflow: hidden;
+      background: var(--green-deep);
+      color: var(--page);
+    }
+    .contact-panel::after {
+      content: "";
+      position: absolute;
+      width: 230px;
+      aspect-ratio: 1;
+      right: -90px;
+      bottom: -110px;
+      border: 36px solid color-mix(in srgb, var(--yellow) 70%, transparent);
+      border-radius: 50%;
+    }
+    .contact-panel h2 { color: inherit; }
+    .contact-panel p { color: color-mix(in srgb, var(--page) 75%, transparent); }
+    .group-links { display: grid; gap: 12px; align-content: center; position: relative; z-index: 2; }
+    .group-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 76px;
+      padding: 18px 20px;
+      border: 1px solid color-mix(in srgb, var(--page) 30%, transparent);
+      color: inherit;
+      text-decoration: none;
+    }
+    .group-link:hover { background: color-mix(in srgb, var(--page) 9%, transparent); border-color: var(--yellow); }
+    .group-link strong { display: block; }
+    .group-link small { color: color-mix(in srgb, var(--page) 65%, transparent); }
+    .group-link svg { width: 24px; height: 24px; flex: none; fill: none; stroke: var(--yellow); stroke-width: 2; }
+    .official-panel { margin-top: 16px; padding: 28px; border: 1px solid var(--line); background: var(--page); }
+    .official-panel h3 { margin: 0 0 18px; font-family: var(--serif); font-size: 1.7rem; }
+    .official-links { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .official-link { display: flex; flex-direction: column; justify-content: space-between; min-height: 104px; padding: 16px; border: 1px solid var(--line); text-decoration: none; }
+    .official-link:hover { border-color: var(--green); background: var(--green-soft); }
+    .official-link strong { color: var(--green-deep); font-size: .88rem; }
+    .official-link small { margin-top: 9px; color: var(--muted); font-size: .72rem; overflow-wrap: anywhere; }
+
+    footer { padding: 30px 20px 40px; color: var(--muted); font-size: .76rem; text-align: center; }
+    .toast {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 50;
+      max-width: calc(100% - 36px);
+      padding: 11px 14px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--page);
+      box-shadow: var(--shadow);
+      font-size: .82rem;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 52px; }
+      .hero-art { min-height: 350px; max-width: 560px; width: 100%; margin-inline: auto; }
+      .school-strip { grid-template-columns: 1fr; gap: 18px; margin-top: -20px; }
+      .school-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .section-head, .contact-panel, .schedule-head, .practice-head, .alternative-head, .ukt-panel, .faq-layout { grid-template-columns: 1fr; }
+      .faq-intro { position: static; }
+      .practice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .alternative-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .alternative-card:last-child { grid-column: 1 / -1; }
+      .routes > .route:nth-child(n) { grid-column: span 6; }
+      .routes > .route:last-child { grid-column: span 12; }
+      .self-test-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .decision-guide { grid-template-columns: 1fr; }
+      .decision-card:first-child, .decision-card:nth-child(3) { border-left: 0; }
+      .official-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .story-layout { grid-template-columns: 1fr; }
+      .alumni-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1180px); }
+      .topnav { justify-content: center; padding-inline: 8px; overflow: visible; }
+      .topnav > a, .nav-trigger { padding-inline: 8px; font-size: .76rem; white-space: nowrap; }
+      .dropdown-menu { left: -8px; }
+      h1 { font-size: clamp(3.1rem, 18vw, 4.6rem); }
+      .hero { padding-block: 44px 62px; gap: 14px; }
+      .hero-art { min-height: 300px; }
+      .sun { width: 120px; }
+      .campus-frame { inset: 35px 0 18px 4%; }
+      .note-card { padding: 14px; }
+      .school-strip { padding: 22px 20px; }
+      .school-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
+      .school-site { white-space: normal; }
+      .section { padding-block: 62px; }
+      .practice-section { padding-top: 28px; }
+      .section-head { gap: 18px; margin-bottom: 28px; }
+      .routes { display: block; }
+      .route { min-height: 0 !important; margin-bottom: 12px; }
+      .route h3 { margin-top: 28px; }
+      .route-title-row { max-width: 82%; margin-top: 28px; }
+      .route-title-row h3 { margin: 0; }
+      .campus-link { grid-template-columns: 1fr; gap: 4px; }
+      .campus-link-nav { grid-column: 1; grid-row: auto; justify-content: flex-start; margin-top: 3px; }
+      .countdown-long { display: none; }
+      .countdown-short { display: inline; }
+      .countdown-note { max-width: 100%; font-size: .64rem; }
+      .practice, .schedule { margin-top: 42px; }
+      .self-test-grid, .practice-grid, .book-grid, .schedule-grid, .official-links, .decision-cards, .scholarship-grid, .alternative-grid { grid-template-columns: 1fr; }
+      .alternative-card.featured { grid-template-columns: 1fr; gap: 4px; }
+      .alternative-card:last-child { grid-column: auto; }
+      .alternative-panel { padding: 26px 20px; }
+      .school-list { grid-template-columns: 1fr; }
+      .skd-practice-link { grid-template-columns: 1fr; gap: 2px; }
+      .self-test-card { min-height: 0; }
+      .decision-section { padding-bottom: 62px; }
+      .scholarship-section { padding-bottom: 62px; }
+      .decision-intro, .decision-card { padding: 24px 20px; }
+      .scholarship-card, .scholarship-card.featured { grid-column: auto; padding: 22px 20px; }
+      .scholarship-card.featured { grid-template-columns: 1fr; gap: 4px; }
+      .decision-card:nth-child(n) { border-left: 0; border-bottom: 1px solid var(--line); }
+      .decision-card:last-child { border-bottom: 0; }
+      .schedule-column { padding: 20px; }
+      .timeline li { grid-template-columns: 1fr; gap: 3px; }
+      .timeline time { white-space: normal; }
+      .story-template { grid-template-columns: 1fr; }
+      .story-guide, .story-empty { padding: 24px 20px; }
+      .directory-tools { grid-template-columns: 1fr; }
+      .result-count { text-align: left; }
+      .alumni-grid { grid-template-columns: 1fr; }
+      .contact-panel { padding: 32px 22px; }
+      .group-link { align-items: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="Navigasi utama">
+    <div class="nav-dropdown" id="campusNavDropdown">
+      <button class="nav-trigger" id="campusNavTrigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="campusNavMenu">
+        Perguruan tinggi <span class="nav-chevron" aria-hidden="true"></span>
+      </button>
+      <div class="dropdown-menu" id="campusNavMenu" aria-label="Navigasi perguruan tinggi" hidden>
+        <a href="#kenali-dirimu">Kenali Dirimu</a>
+        <a href="#tips-jurusan">Tips Memilih Jurusan</a>
+        <a href="#beasiswa">Info Beasiswa</a>
+        <a href="#jalur-masuk">Jalur Masuk (SNBP/SNBT/TKA/Mandiri)</a>
+        <a href="#jadwal-snpmb">Jadwal SNPMB</a>
+        <a href="#tautan-resmi">Tautan Resmi</a>
+        <a href="#jalur-alternatif">Kedinasan &amp; Jalur Non-PTN</a>
+        <a href="#latihan">Rekomendasi Belajar</a>
+      </div>
+    </div>
+    <a href="#alumni">Direktori alumni</a>
+    <a href="#terhubung">Terhubung</a>
+  </nav>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="context">Expo Kampus · SMA Negeri 1 Candimulyo, Magelang</p>
+        <h1>Dari SMANCA,<br>menuju mana saja.</h1>
+        <p>Kenali jalur masuk perguruan tinggi dan temukan kakak kelas yang bisa diajak bertukar cerita tentang kampus, jurusan, dan prosesnya.</p>
+        <div class="hero-actions">
+          <a class="button" href="#alumni">Cari alumni
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14 0M14 7l5 5-5 5"/></svg>
+          </a>
+          <a class="button secondary" href="#jalur">Pelajari jalur masuk</a>
+          <a class="button whatsapp" href="https://wa.me/?text=Cek%20Sambandha%20SMANCA%20%E2%80%94%20panduan%20lengkap%20jalur%20masuk%20PTN%2C%20beasiswa%2C%20kedinasan%2C%20dan%20direktori%20alumni%20SMAN%201%20Candimulyo%3A%20https%3A%2F%2Fworkspace-theta-sandy.vercel.app%2Fsambandha-smanca" target="_blank" rel="noopener noreferrer" aria-label="Bagikan Sambandha SMANCA via WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.5 0 11.7-5.3 11.7-11.8 0-3.2-1.2-6.1-3.5-8.4Zm-8.3 18.2c-1.8 0-3.6-.5-5.2-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.6 4.7Zm5.4-7.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.2l-.9 1.1c-.2.2-.3.2-.6.1-1.8-.9-3.1-1.7-4.3-3.8-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg>
+            Bagikan via WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="campus-frame">
+          <svg class="campus" viewBox="0 0 560 360" role="img">
+            <g fill="none" stroke="currentColor" stroke-width="8" stroke-linejoin="round">
+              <path d="M28 322h504M75 322V168h410v154M138 168V98h284v70M206 98V47h148v51"/>
+              <path d="M116 211h63v111h-63zM248 211h64v111h-64zM381 211h63v111h-63zM237 98l43-42 43 42M280 47V18M280 18h55"/>
+              <path d="M102 168h356M68 168h424"/>
+            </g>
+            <g fill="currentColor">
+              <circle cx="148" cy="247" r="13"/><circle cx="280" cy="247" r="13"/><circle cx="412" cy="247" r="13"/>
+            </g>
+          </svg>
+        </div>
+        <div class="note-card"><strong>19 alumni</strong><span>lintas kampus dan program studi, siap ditemukan.</span></div>
+      </div>
+    </section>
+
+    <aside class="school-strip wrap" aria-labelledby="about-smanca">
+      <div>
+        <h2 id="about-smanca">SMA Negeri 1 Candimulyo</h2>
+        <p class="school-note">SMANCA · satu-satunya SMA Negeri di Kecamatan Candimulyo, Kabupaten Magelang.</p>
+      </div>
+      <dl class="school-facts">
+        <div><dt>Berdiri</dt><dd>26 Oktober 1995</dd></div>
+        <div><dt>Akreditasi</dt><dd>A · Negeri</dd></div>
+        <div><dt>NPSN</dt><dd>20307627</dd></div>
+        <div><dt>Alamat</dt><dd>Jl. Candimulyo Km. 4, Surojoyo</dd></div>
+      </dl>
+      <a class="school-site" href="https://sman1candimulyo.sch.id/berita-sekolah/" target="_blank" rel="noopener noreferrer">Website resmi ↗</a>
+    </aside>
+
+    <section class="section" id="kenali-dirimu" aria-labelledby="self-test-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Langkah pertama</p>
+            <h2 id="self-test-title">Kenali dirimu,<br>sebelum memilih jurusan.</h2>
+          </div>
+          <p>Mulai dari minat, pola kepribadian, dan cara belajar. Gunakan hasilnya sebagai bahan refleksi untuk menyusun pilihan yang lebih sadar.</p>
+        </div>
+        <div class="self-test-grid">
+          <a class="self-test-card" href="https://www.seemypersonality.com/id/Career-Test" target="_blank" rel="noopener noreferrer">
+            <span class="self-test-number">01</span>
+            <h3>Tes Minat Bakat (RIASEC)</h3>
+            <p class="self-test-source">SeeMyPersonality</p>
+            <p class="self-test-description">60 soal, Bahasa Indonesia, gratis tanpa daftar akun</p>
+            <span class="self-test-action">Mulai tes ↗</span>
+          </a>
+          <a class="self-test-card" href="https://www.16personalities.com" target="_blank" rel="noopener noreferrer">
+            <span class="self-test-number">02</span>
+            <h3>Tes Kepribadian (16 Tipe)</h3>
+            <p class="self-test-source">16Personalities</p>
+            <p class="self-test-description">±10 menit, Bahasa Indonesia, paling populer</p>
+            <span class="self-test-action">Mulai tes ↗</span>
+          </a>
+          <a class="self-test-card" href="https://bigfive-test.com" target="_blank" rel="noopener noreferrer">
+            <span class="self-test-number">03</span>
+            <h3>Tes Big Five (OCEAN)</h3>
+            <p class="self-test-source">BigFive Test</p>
+            <p class="self-test-description">Open-source berbasis IPIP, Bahasa Indonesia tersedia</p>
+            <span class="self-test-action">Mulai tes ↗</span>
+          </a>
+          <a class="self-test-card" href="https://akupintar.id/tes-gaya-belajar" target="_blank" rel="noopener noreferrer">
+            <span class="self-test-number">04</span>
+            <h3>Tes Gaya Belajar + Penjurusan</h3>
+            <p class="self-test-source">Aku Pintar</p>
+            <p class="self-test-description">Gratis: gaya belajar visual/auditori/kinestetik dan tes penjurusan kuliah</p>
+            <span class="self-test-action">Mulai tes ↗</span>
+          </a>
+        </div>
+        <p class="self-test-note"><strong>Catatan:</strong> tes online ini adalah refleksi atau skrining awal, bukan pengganti tes psikologi profesional. Untuk memahami hasil lebih dalam, diskusikan dengan guru BK atau psikolog.</p>
+      </div>
+    </section>
+
+    <section class="section decision-section" id="tips-jurusan" aria-labelledby="tips-jurusan-title">
+      <div class="wrap">
+        <div class="decision-guide">
+          <div class="decision-intro">
+            <p class="eyebrow">Dari refleksi ke pilihan</p>
+            <h2 id="tips-jurusan-title">Tips memilih jurusan.</h2>
+            <p>Hasil tes bukan vonis. Gabungkan apa yang kamu suka, kemampuan yang sudah terlihat, dan kondisi nyata—lalu susun pilihan yang benar-benar mau kamu jalani.</p>
+          </div>
+          <div class="decision-cards">
+            <article class="decision-card">
+              <span class="decision-label">01 · Baca peluang</span>
+              <h3>Daya tampung &amp; keketatan</h3>
+              <p><strong>Daya tampung</strong> adalah jumlah kursi yang tersedia. <strong>Keketatan</strong> membandingkan jumlah pendaftar dengan kursi; makin ketat, biasanya makin sulit ditembus.</p>
+              <ul class="decision-list">
+                <li>Pilihan 1: jurusan utama yang paling kamu incar dan siap perjuangkan.</li>
+                <li>Pilihan 2: tetap cocok untukmu, tetapi peluangnya lebih realistis—bukan sekadar pilihan asal aman.</li>
+              </ul>
+              <p style="margin-top:13px">Angka berubah tiap tahun. Cek data terbaru di <a href="https://portal.snpmb.id" target="_blank" rel="noopener noreferrer">portal SNPMB ↗</a> dan laman resmi kampus tujuan.</p>
+            </article>
+            <article class="decision-card">
+              <span class="decision-label">02 · Seimbangkan</span>
+              <h3>Tiga sisi pertimbangan</h3>
+              <div class="triangle-points">
+                <div class="triangle-point"><strong>Minat</strong><span>Apa yang membuatmu penasaran dan betah dipelajari? Pakai hasil tes di atas sebagai pemantik.</span></div>
+                <div class="triangle-point"><strong>Kemampuan</strong><span>Lihat pola nilai rapor, pelajaran yang kuat, dan hasil tryout—bukan satu nilai saja.</span></div>
+                <div class="triangle-point"><strong>Prospek</strong><span>Telusuri arah karier, biaya kuliah dan hidup, serta lokasi kampus.</span></div>
+              </div>
+              <p style="margin-top:13px">Tidak ada satu jawaban yang paling benar untuk semua orang. Cari titik temu yang paling masuk akal untuk kondisimu.</p>
+            </article>
+            <article class="decision-card">
+              <span class="decision-label">03 · Hindari</span>
+              <h3>Jebakan yang sering terjadi</h3>
+              <ul class="decision-list">
+                <li>Ikut-ikutan teman.</li>
+                <li>Tergoda gengsi atau nama jurusan yang terdengar keren.</li>
+                <li>Mengejar prospek gaji tanpa mempertimbangkan minat.</li>
+                <li>Mengabaikan biaya dan lokasi kampus.</li>
+                <li>Tidak menyiapkan rencana cadangan.</li>
+              </ul>
+            </article>
+            <article class="decision-card">
+              <span class="decision-label">04 · Lakukan</span>
+              <h3>Empat langkah praktis</h3>
+              <ol class="decision-steps">
+                <li><span><a href="#kenali-dirimu">Kenali diri</a> lewat tes di atas dan catatan pengalaman belajarmu.</span></li>
+                <li><span>Riset 3–5 jurusan kandidat: mata kuliah, kegiatan belajar, dan jalur kariernya.</span></li>
+                <li><span>Cek daya tampung dan keketatan terbaru dari sumber resmi.</span></li>
+                <li><span>Diskusikan dengan guru BK, orang tua, atau <a href="#alumni">alumni di halaman ini</a>.</span></li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scholarship-section" id="beasiswa" aria-labelledby="beasiswa-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Biaya bukan akhir jalan</p>
+            <h2 id="beasiswa-title">Info Beasiswa.</h2>
+          </div>
+          <p>Panduan awal untuk lulusan SMA/sederajat yang ingin kuliah. Mulai dari bantuan pemerintah, jalur prestasi, sampai beasiswa kampus.</p>
+        </div>
+
+        <div class="scholarship-grid">
+          <article class="scholarship-card featured">
+            <div>
+              <span class="scholarship-kicker">Utama · Pemerintah</span>
+              <h3>KIP Kuliah</h3>
+              <p>Program Kemdiktisaintek untuk calon mahasiswa dengan keterbatasan ekonomi dan potensi akademik.</p>
+              <a class="scholarship-link" href="https://kip-kuliah.kemdikbud.go.id" target="_blank" rel="noopener noreferrer">Buka laman resmi KIP Kuliah ↗</a>
+            </div>
+            <ul class="scholarship-details">
+              <li><strong>Sasaran 2026:</strong> lulusan SMA/SMK/MA tahun 2024–2026, maksimal dua tahun setelah lulus.</li>
+              <li><strong>Syarat ekonomi:</strong> penghasilan kotor orang tua/wali maksimal Rp4.000.000 per bulan atau Rp750.000 per anggota keluarga. Prioritas bagi pemegang KIP sekolah, penerima PKH/KKS, serta siswa yang terdata di DTKS/PIP.</li>
+              <li><strong>Cakupan:</strong> bebas biaya kuliah (UKT), bantuan biaya hidup Rp800.000–Rp1.400.000 per bulan menurut lima klaster wilayah, dan total biaya pendidikan S1 maksimal delapan semester sebesar Rp33.600.000.</li>
+              <li><strong>Pilihan kampus:</strong> berlaku di PTN melalui SNBP, SNBT, atau Mandiri maupun PTS dengan program studi minimal terakreditasi C.</li>
+              <li><strong>Pendaftaran akun 2026:</strong> 3 Februari–31 Oktober 2026; jalur mandiri masih dibuka sampai 31 Oktober 2026.</li>
+              <li><strong>Catatan UTBK:</strong> pembebasan biaya selektif hanya untuk pemegang KIP pendidikan menengah yang datanya terverifikasi, bukan otomatis untuk semua pendaftar KIP Kuliah.</li>
+            </ul>
+          </article>
+
+          <article class="scholarship-card">
+            <span class="scholarship-kicker">Prestasi · Kemendikdasmen</span>
+            <h3>Beasiswa Unggulan</h3>
+            <p>Jalur prestasi untuk mahasiswa baru program S1/D4.</p>
+            <ul class="scholarship-details">
+              <li>Lulusan maksimal dua tahun sebelumnya dan usia maksimal 22 tahun untuk mahasiswa baru.</li>
+              <li>Memiliki LoA unconditional serta sertifikat UKBI minimal predikat Madya dengan skor 482.</li>
+              <li>Menulis esai 1.000–1.500 kata; prestasi tingkat nasional atau internasional diutamakan.</li>
+            </ul>
+            <a class="scholarship-link" href="https://beasiswaunggulan.kemendikdasmen.go.id/" target="_blank" rel="noopener noreferrer">Buka laman resmi ↗</a>
+          </article>
+
+          <article class="scholarship-card">
+            <span class="scholarship-kicker">Kepemimpinan · Tanoto Foundation</span>
+            <h3>Beasiswa TELADAN</h3>
+            <p>Untuk mahasiswa baru semester satu di 10 PTN mitra.</p>
+            <ul class="scholarship-details">
+              <li><strong>PTN mitra:</strong> UGM, UI, ITB, IPB, UB, UNDIP, UNHAS, UNMUL, UNRI, dan USU.</li>
+              <li><strong>Cakupan:</strong> UKT hingga delapan semester, tunjangan hidup, dan program pengembangan kepemimpinan.</li>
+              <li><strong>Syarat:</strong> rata-rata rapor kelas XII minimal 8,0, aktif berorganisasi, dan tidak sedang menerima beasiswa lain. Penerima KIP Kuliah tetap boleh mendaftar.</li>
+              <li>Dibuka setiap tahun sekitar Juli–September.</li>
+            </ul>
+            <a class="scholarship-link" href="https://www.tanotofoundation.org/teladan-2027/" target="_blank" rel="noopener noreferrer">Buka TELADAN 2027 ↗</a>
+          </article>
+
+          <article class="scholarship-card">
+            <span class="scholarship-kicker">Kampus BUMN</span>
+            <h3>Beasiswa APERTI BUMN</h3>
+            <p>Skema beasiswa penuh dan parsial untuk lulusan SMA/SMK/MA tahun 2025–2026.</p>
+            <ul class="scholarship-details">
+              <li><strong>Kampus:</strong> Telkom University, Universitas Pertamina, Institut Teknologi PLN, ULBI, UISI, dan Politeknik Semen Indonesia.</li>
+              <li>Menyiapkan rapor semester 1–5 dan hanya boleh memilih satu kampus tujuan.</li>
+              <li>Pendaftaran tahunan biasanya sekitar Mei–Juni. Pantau informasi di Instagram <strong>@apertibumn</strong>.</li>
+            </ul>
+          </article>
+
+          <article class="scholarship-card">
+            <span class="scholarship-kicker">Jalur Kampus</span>
+            <h3>Beasiswa Prestasi PTS</h3>
+            <p>Banyak perguruan tinggi swasta menawarkan potongan UKT 20–50% untuk prestasi akademik atau nonakademik, tahfidz, dan olahraga.</p>
+            <ul class="scholarship-details">
+              <li>Contoh kampus: Universitas AMIKOM Yogyakarta dan UMS melalui jalur BKHAD, BTUM, hafidz, serta unggulan.</li>
+              <li>Skema dan syarat berbeda di setiap kampus; periksa laman PMB kampus tujuanmu.</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="ukt-panel" aria-labelledby="ukt-title">
+          <div>
+            <p class="eyebrow">Dasar biaya kuliah</p>
+            <h3 id="ukt-title">Memahami UKT</h3>
+          </div>
+          <ul class="ukt-list">
+            <li><strong>UKT (Uang Kuliah Tunggal)</strong> adalah biaya kuliah per semester di PTN. Besarnya <strong>TIDAK</strong> sama untuk semua orang — dibagi ke dalam beberapa golongan berdasarkan kemampuan ekonomi orang tua/wali.</li>
+            <li>Golongan ditetapkan dari verifikasi data ekonomi saat daftar ulang: penghasilan orang tua, tagihan listrik, PBB, foto rumah, dan dokumen pendukung lain. Golongan 1 paling ringan, makin tinggi golongannya makin besar biayanya.</li>
+            <li>Karena itu: isi data ekonomi dengan <strong>JUJUR</strong> dan lengkap. Data yang tidak jujur bisa berakibat penetapan golongan yang salah atau masalah administratif.</li>
+            <li>Penerima KIP Kuliah dibebaskan dari UKT dan mendapat bantuan biaya hidup.</li>
+            <li><strong>Catatan:</strong> sistem UKT hanya berlaku di PTN. PTS memakai skema biaya sendiri (SPP/uang semester) sesuai ketentuan masing-masing kampus.</li>
+          </ul>
+        </aside>
+
+        <p class="scholarship-note"><strong>Susun prioritas:</strong> Djarum Beasiswa Plus, Pertamina Sobat Bumi, dan Beasiswa Bank Indonesia umumnya ditujukan untuk mahasiswa yang sudah kuliah—minimal semester 2–4 dengan IPK minimal 3,0. Jadi, fokus ke lima pilihan di atas saat baru lulus, lalu kejar program on-going setelah kuliah berjalan. Jadwal dan syarat dapat berubah setiap tahun; selalu cek laman resmi masing-masing program.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="jalur">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Mulai dari jalurnya</p>
+            <h2>Empat pintu,<br>banyak kemungkinan.</h2>
+          </div>
+          <p>Setiap jalur punya ritme persiapan yang berbeda. Kenali mekanismenya, catat tenggat, lalu pilih strategi yang paling masuk akal untukmu.</p>
+        </div>
+        <nav class="section-subnav" aria-label="Navigasi perguruan tinggi">
+          <a href="#jalur-masuk">Jalur Masuk</a>
+          <a href="#tka">TKA</a>
+          <a href="#jadwal-snpmb">Jadwal SNPMB</a>
+          <a href="#tautan-resmi">Tautan Resmi</a>
+          <a href="#latihan">Rekomendasi Belajar</a>
+        </nav>
+        <div class="routes" id="jalur-masuk">
+          <article class="route">
+            <span class="route-number">01</span><span class="route-mark" aria-hidden="true"></span>
+            <div class="route-title-row">
+              <h3>SNBT &amp; UTBK</h3>
+              <span class="countdown-pill" id="countdownClock" role="timer" aria-label="Hitung mundur menuju perkiraan pelaksanaan UTBK-SNBT 2027" title="Estimasi berdasarkan pola 2026; jadwal resmi 2027 belum diumumkan.">
+                <span class="countdown-long" id="countdownLong">Menghitung…</span>
+                <span class="countdown-short" id="countdownShort" aria-hidden="true">H—</span>
+              </span>
+            </div>
+            <p class="countdown-note">Estimasi dari pola 2026 · jadwal resmi 2027 belum diumumkan.</p>
+            <p>SNBT menyeleksi berdasarkan hasil UTBK. Peserta bebas memilih PTN lintas wilayah.</p>
+            <ul class="route-details">
+              <li><strong>Materi:</strong> Tes Potensi Skolastik—Penalaran Umum, Pengetahuan dan Pemahaman Umum, Pemahaman Bacaan dan Menulis, serta Pengetahuan Kuantitatif—dan Tes Literasi Bahasa Indonesia, Bahasa Inggris, serta Penalaran Matematika.</li>
+              <li><strong>Pilihan:</strong> maksimal 4 program studi, dengan batas maksimal 2 Sarjana dan 2 Vokasi.</li>
+              <li>UTBK hanya dapat diikuti 1 kali; hasilnya berlaku pada tahun yang sama.</li>
+              <li><strong>Biaya UTBK 2026:</strong> Rp200.000. Pemegang KIP Kuliah kategori 1 tidak dikenai biaya.</li>
+            </ul>
+            <div class="source-links"><a href="https://snpmb.id/utbk-snbt/informasi-umum" target="_blank" rel="noopener noreferrer">Informasi resmi UTBK-SNBT ↗</a></div>
+          </article>
+          <article class="route">
+            <span class="route-number">02</span><span class="route-mark" aria-hidden="true"></span>
+            <h3>SNBP</h3>
+            <p>Seleksi Nasional Berdasarkan Prestasi menilai rapor serta prestasi akademik dan nonakademik. Kuotanya minimum 20% daya tampung PTN; biaya seleksi ditanggung pemerintah.</p>
+            <ul class="route-details">
+              <li><strong>Syarat siswa:</strong> kelas 12, punya NISN dan terdaftar di PDSS, punya nilai TKA, serta memiliki Akun SNPMB Siswa.</li>
+              <li><strong>Pilihan:</strong> maksimal 2 program studi di 1–2 PTN. Jika memilih 2, salah satunya harus berada di PTN seprovinsi dengan sekolah asal.</li>
+              <li><strong>Perhatikan:</strong> siswa yang lulus SNBP tidak boleh mengikuti UTBK-SNBT pada tahun yang sama maupun tahun-tahun berikutnya (praktis selamanya), serta tidak boleh mengikuti Jalur Mandiri pada tahun yang sama. <a href="#faq">Penjelasan lengkap di FAQ</a>.</li>
+            </ul>
+            <div class="source-links">
+              <a href="https://snpmb.id/snbp/informasi-umum" target="_blank" rel="noopener noreferrer">Informasi resmi SNBP ↗</a>
+              <a href="https://portal.snpmb.id" target="_blank" rel="noopener noreferrer">Portal akun SNPMB ↗</a>
+            </div>
+          </article>
+          <article class="route" id="tka" aria-labelledby="tka-title">
+            <span class="route-number">Pelengkap SNBP</span><span class="route-mark" aria-hidden="true"></span>
+            <h3 id="tka-title">TKA — Syarat Wajib SNBP</h3>
+            <p><strong>TKA (Tes Kemampuan Akademik) Kemdikdasmen</strong> menjadi syarat wajib pendaftaran SNBP, sehingga siswa yang mengincar jalur prestasi perlu mengikuti TKA.</p>
+            <div class="source-links" aria-label="Latihan TKA">
+              <span class="source-label">Latihan TKA:</span>
+              <a href="https://sainsin.com/tryout/233" target="_blank" rel="noopener noreferrer">SainsIn — Try Out TKA ↗</a>
+              <a href="https://www.alternatifa.com/" target="_blank" rel="noopener noreferrer">Alternatifa — Persiapan TKA-SNBP ↗</a>
+            </div>
+            <p class="tka-note">Jadwal dan ketentuan TKA mengikuti pengumuman resmi Kemdikdasmen dan SNPMB.</p>
+          </article>
+          <article class="route">
+            <span class="route-number">03</span>
+            <h3>Mandiri</h3>
+            <p>SNPMB mengenalkan tiga jalur masuk PTN: SNBP, SNBT, dan Seleksi Mandiri yang diselenggarakan masing-masing PTN. Syarat, biaya, serta jadwalnya dapat berbeda antarkampus.</p>
+            <ul class="route-details"><li>Siswa yang sudah lulus SNBP tidak boleh mengikuti Jalur Mandiri pada tahun yang sama.</li></ul>
+            <div class="source-links"><a href="https://snpmb.id/snbp/informasi-umum" target="_blank" rel="noopener noreferrer">Ketentuan resmi SNBP ↗</a></div>
+            <div class="campus-links">
+              <strong>Pendaftaran resmi:</strong>
+              <div class="campus-link">
+                <span><strong>Universitas Tidar</strong><br>SMUT (ujian tulis), SMUTBK (nilai UTBK), SMJP (prestasi), dan SMJK (kerja sama).</span>
+                <span class="campus-link-nav"><a href="https://um.untidar.ac.id/" target="_blank" rel="noopener noreferrer">Info seleksi ↗</a><a href="https://smart.untidar.ac.id/" target="_blank" rel="noopener noreferrer">Daftar ↗</a></span>
+              </div>
+              <div class="campus-link">
+                <span><strong>Universitas Gadjah Mada</strong><br>UM UGM dengan pendaftaran online dan ujian CBT.</span>
+                <span class="campus-link-nav"><a href="https://um.ugm.ac.id/" target="_blank" rel="noopener noreferrer">Info &amp; daftar ↗</a></span>
+              </div>
+              <div class="campus-link">
+                <span><strong>Universitas Sebelas Maret</strong><br>SPMB UNS.</span>
+                <span class="campus-link-nav"><a href="https://spmb.uns.ac.id/" target="_blank" rel="noopener noreferrer">Info &amp; daftar ↗</a></span>
+              </div>
+            </div>
+          </article>
+          <article class="route">
+            <span class="route-number">04</span>
+            <h3>Perguruan tinggi swasta</h3>
+            <p>Eksplorasi tes internal, beasiswa, dan program kerja sama sekolah yang tersedia. Untuk syarat dan jadwal, selalu periksa laman resmi kampus tujuan.</p>
+            <div class="campus-links">
+              <strong>Pendaftaran resmi:</strong>
+              <div class="campus-link">
+                <span><strong>Universitas Muhammadiyah Magelang</strong><br>UNIMMA · akreditasi Unggul · pendaftaran gelombang serta jalur PMDK/prestasi bebas biaya pendaftaran.</span>
+                <span class="campus-link-nav"><a href="https://pmb.unimma.ac.id/" target="_blank" rel="noopener noreferrer">Info &amp; daftar ↗</a></span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <section class="schedule" id="jadwal-snpmb" aria-labelledby="schedule-title">
+          <div class="schedule-head">
+            <div>
+              <p class="eyebrow">Jadwal penting SNPMB</p>
+              <h3 id="schedule-title">Jejak siklus 2026.</h3>
+            </div>
+            <p class="schedule-note"><strong>Jadwal siklus 2026 (sudah selesai).</strong> Cek snpmb.id untuk jadwal terbaru.</p>
+          </div>
+          <div class="schedule-grid">
+            <article class="schedule-column">
+              <h4>SNBP 2026</h4>
+              <ol class="timeline">
+                <li><strong>Registrasi Akun Sekolah</strong><time>5–26 Jan 2026</time></li>
+                <li><strong>Pengisian PDSS</strong><time>5 Jan–2 Feb 2026</time></li>
+                <li><strong>Registrasi Akun Siswa</strong><time>12 Jan–18 Feb 2026</time></li>
+                <li><strong>Pendaftaran SNBP</strong><time>3–18 Feb 2026</time></li>
+                <li><strong>Pengumuman</strong><time>31 Mar 2026</time></li>
+              </ol>
+            </article>
+            <article class="schedule-column">
+              <h4>UTBK-SNBT 2026</h4>
+              <ol class="timeline">
+                <li><strong>Pendaftaran</strong><time>25 Mar–7 Apr 2026</time></li>
+                <li><strong>Unduh Kartu Peserta</strong><time>11–15 Apr 2026</time></li>
+                <li><strong>Pelaksanaan UTBK</strong><time>21–30 Apr 2026</time></li>
+                <li><strong>Pengumuman</strong><time>25 Mei 2026</time></li>
+                <li><strong>Unduh Sertifikat</strong><time>26 Mei–31 Jul 2026</time></li>
+              </ol>
+            </article>
+          </div>
+          <div class="source-links"><a href="https://snpmb.id/jadwal-penting" target="_blank" rel="noopener noreferrer">Lihat jadwal resmi SNPMB ↗</a></div>
+        </section>
+        <aside class="official-panel" id="tautan-resmi" aria-labelledby="official-title">
+          <h3 id="official-title">Tautan resmi</h3>
+          <div class="official-links">
+            <a class="official-link" href="https://portal.snpmb.id" target="_blank" rel="noopener noreferrer"><strong>Portal SNPMB ↗</strong><small>Registrasi dan akses akun siswa</small></a>
+            <a class="official-link" href="https://halo.snpmb.id" target="_blank" rel="noopener noreferrer"><strong>Helpdesk SNPMB ↗</strong><small>Call Centre 08041450450</small></a>
+            <a class="official-link" href="https://kip-kuliah.kemdikbud.go.id" target="_blank" rel="noopener noreferrer"><strong>KIP Kuliah ↗</strong><small>Informasi program dan pendaftaran</small></a>
+            <a class="official-link" href="https://snpmb.id/faq" target="_blank" rel="noopener noreferrer"><strong>FAQ SNPMB ↗</strong><small>Jawaban resmi untuk pertanyaan umum</small></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section alternative-section" id="jalur-alternatif" aria-labelledby="jalur-alternatif-title">
+      <div class="wrap">
+        <div class="alternative-panel">
+          <div class="alternative-head">
+            <div>
+              <p class="eyebrow">Alternatif jalur PTN</p>
+              <h2 id="jalur-alternatif-title">Kedinasan &amp;<br>jalur non-PTN.</h2>
+            </div>
+            <p>Kuliah bukan cuma soal PTN. Kenali pilihan yang mengarah ke ikatan dinas, karier pertahanan dan kepolisian, pendidikan vokasi, pelatihan kerja, atau membangun usaha.</p>
+          </div>
+
+          <div class="alternative-grid">
+            <article class="alternative-card featured">
+              <div>
+                <span class="alternative-number">01 · Ikatan dinas</span>
+                <h3>Sekolah Kedinasan</h3>
+                <p>Kuliah gratis. Setelah lulus, peserta berpeluang besar diangkat menjadi CPNS/ASN, dengan kewajiban ikatan dinas dan bersedia ditempatkan di seluruh Indonesia.</p>
+                <div class="formation-box"><strong>Formasi 2026: 4.770 kursi di 9 kementerian/lembaga.</strong><br>IPDN 1.410 · PKN STAN 1.000 · Kemenhub 891 · Polstat STIS 564 · Poltek Imigrasi &amp; Pemasyarakatan 375 · Poltek Pengayoman 250 · STMKG 130 · STIN 100 · Poltek SSN 50.</div>
+                <a class="alternative-source" href="https://sscasn.bkn.go.id" target="_blank" rel="noopener noreferrer">Portal pendaftaran SSCASN ↗</a>
+                <p class="deadline-note"><strong>Pendaftaran 2026 sudah lewat:</strong> 18–30 Agustus 2026. Polanya dibuka tiap tahun sekitar Agustus; siapkan KTP, KK, rapor semester 1–5, dan surat keterangan belum menikah jauh-jauh hari.</p>
+              </div>
+              <div>
+                <p><strong>Delapan kelompok sekolah utama</strong></p>
+                <ul class="school-list">
+                  <li><strong><a href="https://pknstan.ac.id" target="_blank" rel="noopener noreferrer">PKN STAN ↗</a></strong><br>Kemenkeu · keuangan, pajak, bea cukai</li>
+                  <li><strong><a href="https://spcp.ipdn.ac.id" target="_blank" rel="noopener noreferrer">IPDN ↗</a></strong><br>Kemendagri · pemerintahan, semi militer</li>
+                  <li><strong><a href="https://spmb.stis.ac.id/" target="_blank" rel="noopener noreferrer">Polstat STIS ↗</a></strong><br>BPS · statistika</li>
+                  <li><strong><a href="https://ptb.stmkg.ac.id/" target="_blank" rel="noopener noreferrer">STMKG ↗</a></strong><br>BMKG · cuaca, iklim, geofisika</li>
+                  <li><strong><a href="https://ptb.stin.ac.id/" target="_blank" rel="noopener noreferrer">STIN ↗</a></strong><br>BIN · intelijen</li>
+                  <li><strong><a href="https://penerimaan.poltekssn.ac.id" target="_blank" rel="noopener noreferrer">Poltek SSN ↗</a></strong><br>BSSN · siber dan sandi</li>
+                  <li><strong><a href="https://catar.kemenkumham.go.id/" target="_blank" rel="noopener noreferrer">Poltekim &amp; Poltekip/Poltekpin ↗</a></strong><br>Kemenkum · imigrasi dan pemasyarakatan</li>
+                  <li><strong><a href="https://sipencatar.dephub.go.id/" target="_blank" rel="noopener noreferrer">Sekolah Kemenhub ↗</a></strong><br>STTD, pelayaran, penerbangan</li>
+                </ul>
+                <ul class="route-details">
+                  <li><strong>Syarat umum:</strong> WNI; usia rata-rata 16–22 tahun; belum menikah dan tidak menikah selama pendidikan; tidak bertato atau bertindik kecuali karena adat/agama; sehat jasmani-rohani; serta memenuhi standar nilai sekolah tujuan. Khusus STAN, nilai Bahasa Inggris dan Matematika minimal 80.</li>
+                  <li><strong>Tahapan:</strong> seleksi administrasi → SKD CAT BKN (TWK, TIU, TKP) → seleksi lanjutan berupa kesehatan, kesamaptaan/fisik, psikotes, dan wawancara sesuai sekolah.</li>
+                </ul>
+                <div class="skd-practice" aria-label="Latihan SKD">
+                  <strong>Latihan SKD</strong>
+                  <div class="skd-practice-links">
+                    <div class="skd-practice-link"><a href="https://privatalfaiz.id/" target="_blank" rel="noopener noreferrer">Privat Al Faiz ↗</a><span>Bimbel online + tryout SKD CPNS &amp; Kedinasan (TWK, TIU, TKP), ada aplikasi Android</span></div>
+                    <div class="skd-practice-link"><a href="https://sainsin.com" target="_blank" rel="noopener noreferrer">SainsIn ↗</a><span>Paket tryout SKD Kedinasan + pembahasan, materi, dan drill soal</span></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="alternative-card">
+              <span class="alternative-number">02 · Pertahanan</span>
+              <h3>TNI</h3>
+              <p>Tiga jalur utama dengan ketentuan pendidikan yang berbeda.</p>
+              <ul class="route-details">
+                <li><strong>Akademi:</strong> Akmil, AAL, dan AAU—khusus lulusan SMA/MA, bukan SMK.</li>
+                <li><strong>Bintara &amp; Tamtama:</strong> terbuka untuk lulusan SMA/SMK/MA.</li>
+                <li><strong>TNI AD TA 2026:</strong> pendaftaran Bintara 1 Oktober 2026–13 Januari 2027; Tamtama sampai 10 Februari 2027.</li>
+                <li><strong>Syarat usia:</strong> 17 tahun 10 bulan–26 tahun dan belum menikah selama pendidikan.</li>
+              </ul>
+              <div class="tni-portals">
+                <strong>Portal Rekrutmen TNI</strong>
+                <div class="tni-portal-links">
+                  <a class="alternative-source" href="https://ad.rekrutmen-tni.mil.id" target="_blank" rel="noopener noreferrer">Portal TNI AD ↗</a>
+                  <a class="alternative-source" href="https://al.rekrutmen-tni.mil.id/" target="_blank" rel="noopener noreferrer">Portal TNI AL ↗</a>
+                  <a class="alternative-source" href="https://au.rekrutmen-tni.mil.id" target="_blank" rel="noopener noreferrer">Portal TNI AU ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="alternative-card">
+              <span class="alternative-number">03 · Kepolisian</span>
+              <h3>Polri</h3>
+              <p>Seleksi memakai sistem gugur pada setiap tahap.</p>
+              <ul class="route-details">
+                <li><strong>Akpol:</strong> SMA/MA saja; tinggi minimal 165 cm pria atau 163 cm wanita; usia 16–22 tahun.</li>
+                <li><strong>Bintara PTU:</strong> SMA/SMK/MA; tinggi minimal 165 cm pria atau 160 cm wanita.</li>
+                <li><strong>Tamtama Brimob:</strong> khusus pria.</li>
+                <li><strong>Formasi 2026:</strong> total 6.941.</li>
+                <li><strong>Tahapan:</strong> administrasi → kesehatan → psikologi dan akademik CAT → kesamaptaan → sidang akhir.</li>
+              </ul>
+              <a class="alternative-source" href="https://penerimaan.polri.go.id" target="_blank" rel="noopener noreferrer">Portal penerimaan Polri ↗</a>
+            </article>
+
+            <article class="alternative-card">
+              <span class="alternative-number">04 · Pilihan lain</span>
+              <h3>Non-PTN lainnya</h3>
+              <ul class="route-details">
+                <li><strong>Politeknik/vokasi negeri dan swasta:</strong> pembelajaran lebih banyak praktik dengan durasi yang lebih singkat. KIP Kuliah juga berlaku di PTN vokasi.</li>
+                <li><strong>Balai Latihan Kerja (BLK):</strong> pelatihan keahlian gratis dari pemerintah sebelum terjun ke dunia kerja.</li>
+                <li><strong>Langsung kerja atau wirausaha:</strong> sah-sah saja, tetapi bekali diri dengan satu keahlian yang jelas melalui kursus, sertifikasi, atau magang.</li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="alternative-warning"><strong>Catatan jujur:</strong> seleksi kedinasan, TNI, dan Polri sangat ketat—fisik, akademik, dan mental diuji semua. Persiapan idealnya dimulai sejak kelas XI, bukan dadakan di kelas XII. Waspadai calo atau penipuan yang menjanjikan kelulusan: seleksi resmi memakai CAT dan sistem gugur, tidak ada jalur titipan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt practice-section">
+      <div class="wrap">
+        <section class="practice" id="latihan" aria-labelledby="practice-title">
+          <div class="practice-head">
+            <div>
+              <p class="eyebrow">Rekomendasi belajar</p>
+              <h3 id="practice-title">Latihan, les, dan fokus sebelum hari ujian.</h3>
+            </div>
+            <p class="practice-note">Pilih platform yang sesuai dengan ritme belajarmu untuk latihan soal, try out, les online, fokus, dan evaluasi materi.</p>
+          </div>
+          <div class="practice-grid">
+            <article class="route resource">
+              <span class="route-number">Latihan</span>
+              <h3>Siapkan ritme belajarmu.</h3>
+              <p>Try out, drill soal, dan pembahasan video tersedia di SainsIn.</p>
+              <a href="https://sainsin.com/" target="_blank" rel="noopener noreferrer">Buka SainsIn ↗</a>
+            </article>
+            <article class="route resource">
+              <span class="route-number">Latihan</span>
+              <h3>Ukur progresmu bersama Pahamify.</h3>
+              <p>Bimbel online persiapan UTBK dengan Try Out bersistem penilaian serupa UTBK asli, peringkat nasional, Smart Analysis, bank soal, video belajar animasi, dan persiapan terpandu Pegasus. Tersedia pilihan gratis dan premium.</p>
+              <a href="https://pahamify.com/" target="_blank" rel="noopener noreferrer">Buka Pahamify ↗</a>
+            </article>
+            <article class="route resource">
+              <span class="route-number">Les Online</span>
+              <h3>Belajar bareng Alternatifa Project.</h3>
+              <p>Komunitas belajar online untuk persiapan UTBK-SNBT, TKA-SNBP, SIMAK UI, UM UGM, dan ujian mandiri—dengan mentoring, pembahasan soal yang detail, latihan harian, serta lingkungan belajar suportif. Menurut situsnya, Alternatifa telah mendampingi 200 ribu+ siswa sejak 2021; 70% siswa aktif lulus seleksi PTN tiap tahun dan 10 ribu+ siswa lolos UI, UGM, ITB, serta PTN terbaik pada 2024–2025.</p>
+              <a href="https://www.alternatifa.com/" target="_blank" rel="noopener noreferrer">Buka Alternatifa ↗</a>
+            </article>
+            <article class="route resource">
+              <span class="route-number">Aplikasi Fokus Belajar</span>
+              <h3>Jaga konsistensi bersama Yeolpumta.</h3>
+              <p>YPT — Yeolpumta adalah stopwatch belajar dari Pallo Inc., Korea, dengan 5 juta+ unduhan di Google Play. Catat waktu per mata pelajaran, blokir aplikasi pengganggu saat sesi fokus, bergabung dalam grup belajar dengan progres dan peringkat realtime, lalu tinjau statistik harian, mingguan, bulanan, planner, serta hitung mundur D-Day ujian.</p>
+              <a href="https://play.google.com/store/apps/details?id=com.pallo.passiontimerscoped" target="_blank" rel="noopener noreferrer">Download di Google Play ↗</a>
+            </article>
+          </div>
+          <div class="book-block" aria-labelledby="offline-title">
+            <h4 id="offline-title">Bimbel Offline</h4>
+            <div class="book-grid">
+              <a class="book-card offline-card" href="https://ganeshaoperation.com/" target="_blank" rel="noopener noreferrer">
+                <h5>Ganesha Operation (GO)</h5>
+                <p>Bimbel tatap muka, ada 3 cabang di Magelang (Jl. Mayjend Sutoyo, Jl. Pahlawan, Mertoyudan); kelas intensif persiapan PTN</p>
+              </a>
+              <a class="book-card offline-card" href="http://neutron.co.id/" target="_blank" rel="noopener noreferrer">
+                <h5>Neutron Yogyakarta</h5>
+                <p>Bimbel tatap muka &amp; live streaming, 121+ cabang di 50 kota; ada program khusus UTBK-SNBT dan Kedinasan — cek cabang terdekat di webnya</p>
+              </a>
+            </div>
+          </div>
+          <div class="book-block" aria-labelledby="book-title">
+            <h4 id="book-title">Buku Fisik</h4>
+            <div class="book-grid">
+              <article class="book-card">
+                <h5>Wangsit</h5>
+                <p class="book-credit">Om Jero</p>
+                <p>Buku latihan soal UTBK/SNBT paling populer; cocok untuk persiapan SNBT/UTBK mandiri.</p>
+              </article>
+              <article class="book-card">
+                <h5>Buku SKD CPNS &amp; Kedinasan</h5>
+                <p class="book-credit">Al Faiz (Privat Alfaiz)</p>
+                <p>Materi TWK, TIU, TKP + soal HOTS sesuai kisi-kisi terbaru; cocok untuk persiapan SKD sekolah kedinasan.</p>
+              </article>
+            </div>
+            <p class="book-note">Buku-buku ini terbit dengan edisi baru tiap tahun — pastikan membeli edisi terbaru di toko buku atau toko online resmi.</p>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="section" id="alumni">
+      <div class="wrap">
+        <div class="directory-head">
+          <p class="eyebrow">Direktori</p>
+          <h2>Temukan orang yang<br>sudah menempuh jalannya.</h2>
+          <div class="directory-tools">
+            <label class="search-wrap" for="searchInput">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
+              <input id="searchInput" type="search" autocomplete="off" placeholder="Cari nama, kampus, jurusan, atau fakultas…">
+            </label>
+            <div class="result-count" id="resultCount" aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="alumni-grid" id="alumniGrid"></div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-layout">
+        <div class="faq-intro">
+          <p class="eyebrow">Masih bingung?</p>
+          <h2 id="faq-title">Pertanyaan yang Sering Ditanyakan</h2>
+          <p>Buka pertanyaan untuk melihat jawaban ringkas sebelum menghubungi alumni atau pengurus.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" name="faq">
+            <summary>Apa bedanya SNBP, SNBT, dan Mandiri?</summary>
+            <p>SNBP menyeleksi berdasarkan prestasi (nilai rapor via PDSS, tanpa tes). SNBT menyeleksi berdasarkan hasil UTBK. Seleksi Mandiri diadakan masing-masing PTN dengan aturan sendiri.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Kalau ikut SNBP, masih bisa ikut SNBT?</summary>
+            <p>Bisa, selama TIDAK lolos SNBP. Tapi kalau kamu dinyatakan LOLOS SNBP, aturannya tegas: kamu TIDAK BOLEH mengikuti UTBK-SNBT — bukan hanya di tahun yang sama, tapi juga di tahun-tahun berikutnya (yang lulus SNBP 2024, 2025, dan 2026 semuanya diblokir dari SNBT 2026). Praktisnya ini berlaku selamanya, karena SNBT sendiri hanya menerima lulusan 3 tahun terakhir. Selain itu, yang lolos SNBP 2026 juga TIDAK BOLEH mengikuti seleksi Jalur Mandiri di PTN mana pun pada tahun yang sama. Jadi pikir matang-matang sebelum mengambil kursi SNBP — sekali lolos, tidak ada jalan kembali ke jalur seleksi nasional lain.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Apakah mendaftar KIP Kuliah mengurangi peluang lolos seleksi?</summary>
+            <p>Tidak. Kelulusan seleksi (SNBP/SNBT/Mandiri) ditentukan murni dari prestasi atau hasil tes. Penetapan penerima KIP Kuliah adalah proses terpisah yang berjalan setelah kamu dinyatakan lolos seleksi.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Lulusan tahun lalu (gap year) bisa daftar apa saja?</summary>
+            <p>SNBT terbuka untuk lulusan 3 tahun terakhir; KIP Kuliah untuk lulusan maksimal 2 tahun setelah lulus; SNBP hanya untuk siswa kelas 12 tahun berjalan. Sekolah kedinasan, TNI/Polri, dan Mandiri punya batas tahun lulusan masing-masing — cek ketentuan tiap penyelenggara.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Berapa kali bisa ikut UTBK dalam setahun?</summary>
+            <p>Satu kali per tahun. Manfaatkan sebaik-baiknya.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Apakah TKA wajib?</summary>
+            <p>Hasil TKA menjadi syarat untuk mendaftar SNBP. Untuk jalur lain, ikuti ketentuan resmi Kemdikdasmen/SNPMB tahun berjalan.</p>
+          </details>
+          <details class="faq-item" name="faq">
+            <summary>Nilai raporku jelek di semester awal, masih ada harapan di SNBP?</summary>
+            <p>SNBP memakai nilai rapor semester 1–5 yang diisikan sekolah via PDSS — nilai yang sudah lewat tidak bisa diubah. Fokus maksimalkan semester yang tersisa, dan siapkan diri untuk SNBT sebagai jalur utama.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="terhubung">
+      <div class="wrap">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow" style="color:var(--yellow)">Ruang diskusi</p>
+            <h2>Tanya langsung, tumbuh bersama.</h2>
+            <p>Masuk ke grup yang sesuai untuk berdiskusi dengan alumni dan sesama siswa.</p>
+            <div class="contact-share">
+              <a class="button whatsapp" href="https://wa.me/?text=Cek%20Sambandha%20SMANCA%20%E2%80%94%20panduan%20lengkap%20jalur%20masuk%20PTN%2C%20beasiswa%2C%20kedinasan%2C%20dan%20direktori%20alumni%20SMAN%201%20Candimulyo%3A%20https%3A%2F%2Fworkspace-theta-sandy.vercel.app%2Fsambandha-smanca" target="_blank" rel="noopener noreferrer" aria-label="Bagikan Sambandha SMANCA via WhatsApp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.5 0 11.7-5.3 11.7-11.8 0-3.2-1.2-6.1-3.5-8.4Zm-8.3 18.2c-1.8 0-3.6-.5-5.2-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.6 4.7Zm5.4-7.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.2l-.9 1.1c-.2.2-.3.2-.6.1-1.8-.9-3.1-1.7-4.3-3.8-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.6l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg>
+                Bagikan via WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="group-links">
+            <div class="group-link">
+              <span><strong>Grup SAMBANDHA</strong><small>Diskusi kampus dan jalur masuk · minta tautan undangan kepada pengurus</small></span>
+            </div>
+            <div class="group-link">
+              <span><strong>Subgrup Kedinasan / TNI / Polri</strong><small>Ruang bahasan jalur kedinasan · minta tautan undangan kepada pengurus</small></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>Proyek Expo Kampus SMA Negeri 1 Candimulyo, Magelang · Data direktori dari alumni yang berpartisipasi.</footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    var alumni = [
+      {name:"Ziendik Pancar Mudra Wirawan",uni:"ITS",fakultas:"FTEIC",jurusan:"TEKNIK ELEKTRO",year:"2023",kontak:"@itsjiwira",salam:"HALLO TEMAN TEMAN, SILAHKAN BOLEH TANYA TANYA"},
+      {name:"Eka Azahra Zulsita",uni:"Universitas Tidar",fakultas:"Fakultas Keguruan dan Ilmu Pendidikan",jurusan:"Pendidikan IPA",year:"2026",kontak:"@zhrasita21",salam:"semoga sukses"},
+      {name:"Muhamad Zidan Muzakki",uni:"UNIVERSITAS GADJAH MADA",fakultas:"Sekolah Vokasi",jurusan:"Teknik Pengelolaan dan Perawatan Alat Berat",year:"2025",kontak:"IG: zidan__muzakki / LinkedIn: linkedin.com/in/muhamadzidanmuzakki2025",salam:"-"},
+      {name:"Lukman Muji Isnanto",uni:"Universitas Negeri Semarang",fakultas:"Fakultas Ekonomika dan Bisnis",jurusan:"Manajemen",year:"2026",kontak:"IG: lukmanmuji.i",salam:"Semangat terus broo"},
+      {name:"Zahra Aqila Nabil",uni:"Universitas Tidar",fakultas:"Pertanian",jurusan:"Gizi",year:"2026",kontak:"ig: @z.zaqn_",salam:"haii"},
+      {name:"Ghina Sonya Permatasari",uni:"UPNVY",fakultas:"Pertanian",jurusan:"Agribisnis",year:"2026",kontak:"ig: @ghinasp_22",salam:"sukses selalu!!"},
+      {name:"Aliefia Nur Handhini",uni:"Universitas Diponegoro",fakultas:"Kedokteran",jurusan:"Keperawatan",year:"2026",kontak:"@aliefiandhnii_",salam:"Haiii semua :)"},
+      {name:"Oktavianty Anggraeni",uni:"Universitas Sebelas Maret",fakultas:"Sekolah Vokasi",jurusan:"D3 Manajemen Administrasi",year:"2026",kontak:"@oktviantya_ / LinkedIn: Oktavianty Anggraeni",salam:"semangat berproses teman teman!!"},
+      {name:"Kesya Rohimatul Husna",uni:"Poltekkes Kemenkes Semarang",fakultas:"Kesehatan",jurusan:"Kebidanan",year:"2026",kontak:"ig@ksy.syaa_",salam:"semangattt semuanya"},
+      {name:"Sofiana Rahmadani",uni:"Poltekkes Kemenkes Semarang",fakultas:"Kesehatan",jurusan:"Teknologi Laboratorium Medik",year:"2026",kontak:"@_ssfiana",salam:"believe in your journey"},
+      {name:"Lia Ramadhani",uni:"Universitas Tidar",fakultas:"Fakultas Keguruan dan Ilmu Pendidikan",jurusan:"Pendidikan Bahasa dan Sastra Indonesia",year:"2026",kontak:"Instagram: notliarrrr_",salam:"Hai semua, semangat selalu!"},
+      {name:"Navida Salsabila",uni:"Gadjah Mada",fakultas:"Ilmu Budaya",jurusan:"Bahasa dan Sastra Indonesia",year:"2025",kontak:"@piwwgss4_",salam:"Halo, mari bercerita lebih banyak!"},
+      {name:"Maulana Ridho Wicaksono",uni:"Universitas Tidar",fakultas:"Ekonomi",jurusan:"S1 Akuntansi",year:"2026",kontak:"maullpride_",salam:"Assalamualaikum"},
+      {name:"Fajjri Muhamad Adam",uni:"Universitas Tidar",fakultas:"Ekonomi",jurusan:"Manajemen",year:"2026",kontak:"@fjjradamm",salam:"mekarlah dimanapun tempatnya"},
+      {name:"Muhammad Hisyam Nurul Arifin",uni:"Diponegoro University",fakultas:"Faculty of Engineering",jurusan:"Civil Engineering",year:"2025",kontak:"@mdhsrfn_",salam:"semangat belajar di smanca n semangat ngejar univ impian"},
+      {name:"Zafran Maulana Hamid",uni:"Universitas Tidar",fakultas:"Ilmu Sosial dan Ilmu Politik",jurusan:"Ilmu Komunikasi",year:"2025",kontak:"@zfranmaulana",salam:"Sekolah sing bener, kuliah cumlaude, kerja kepenak, tumbas Harley"},
+      {name:"Ratna Syaidatun Rofiah",uni:"Universitas Tidar",fakultas:"Ilmu Sosial dan Ilmu Politik",jurusan:"Ilmu Komunikasi",year:"2025",kontak:"ratnasyaidatunn",salam:"semangat nyakkk"},
+      {name:"Finja Abi Azzahra",uni:"Universitas Tidar",fakultas:"Fakultas Pertanian",jurusan:"Gizi",year:"2026",kontak:"@_finjaazzahra",salam:"hallo semuanya, salam kenall hihi"},
+      {name:"Yosua Mulyo Nugroho",uni:"Universitas Sebelas Maret",fakultas:"Fakultas Pertanian",jurusan:"Soil Science",year:"2023",kontak:"yosuamlyoz",salam:"halo semuanya, selamat berjuang dan berproses"}
+    ];
+
+    // Ganti saat jadwal resmi 2027 keluar.
+    const COUNTDOWN_TARGET = "2027-04-21T00:00:00+07:00";
+
+    var grid = document.getElementById("alumniGrid");
+    var search = document.getElementById("searchInput");
+    var resultCount = document.getElementById("resultCount");
+    var toast = document.getElementById("toast");
+    var toastTimer;
+    var campusNavDropdown = document.getElementById("campusNavDropdown");
+    var campusNavTrigger = document.getElementById("campusNavTrigger");
+    var campusNavMenu = document.getElementById("campusNavMenu");
+
+    function setCampusNav(open) {
+      campusNavDropdown.classList.toggle("open", open);
+      campusNavTrigger.setAttribute("aria-expanded", open ? "true" : "false");
+      campusNavMenu.hidden = !open;
+    }
+
+    campusNavTrigger.addEventListener("click", function (event) {
+      event.stopPropagation();
+      if (event.pointerType === "mouse") {
+        setCampusNav(true);
+      } else {
+        setCampusNav(!campusNavDropdown.classList.contains("open"));
+      }
+    });
+    campusNavDropdown.addEventListener("pointerenter", function (event) {
+      if (event.pointerType === "mouse") setCampusNav(true);
+    });
+    campusNavDropdown.addEventListener("pointerleave", function (event) {
+      if (event.pointerType === "mouse") setCampusNav(false);
+    });
+
+    campusNavMenu.addEventListener("click", function () { setCampusNav(false); });
+    document.addEventListener("click", function (event) {
+      if (!campusNavDropdown.contains(event.target)) setCampusNav(false);
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && campusNavDropdown.classList.contains("open")) {
+        setCampusNav(false);
+        campusNavTrigger.focus();
+      }
+    });
+
+    function makeEl(tag, className, text) {
+      var el = document.createElement(tag);
+      if (className) el.className = className;
+      if (typeof text === "string") el.textContent = text;
+      return el;
+    }
+
+    function showToast(message) {
+      clearTimeout(toastTimer);
+      toast.textContent = message;
+      toast.classList.add("show");
+      toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 2200);
+    }
+
+    function copyContact(value, name) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(function () {
+          showToast("Kontak " + name + " disalin.");
+        }).catch(function () { showToast("Kontak: " + value); });
+      } else {
+        showToast("Kontak: " + value);
+      }
+    }
+
+    function render(list) {
+      grid.textContent = "";
+      resultCount.textContent = list.length + " dari " + alumni.length + " alumni";
+      if (!list.length) {
+        var empty = makeEl("div", "empty");
+        empty.appendChild(makeEl("strong", "", "Belum ada hasil yang cocok."));
+        empty.appendChild(makeEl("p", "", "Coba kata kunci lain, misalnya nama kampus atau jurusan."));
+        grid.appendChild(empty);
+        return;
+      }
+      list.forEach(function (person) {
+        var card = makeEl("article", "alumni-card");
+        card.appendChild(makeEl("h3", "", person.name));
+        card.appendChild(makeEl("p", "campus-name", person.uni));
+        card.appendChild(makeEl("p", "study", person.fakultas + " · " + person.jurusan));
+        var tags = makeEl("div", "meta-row");
+        tags.appendChild(makeEl("span", "tag", "Angkatan " + person.year));
+        card.appendChild(tags);
+        if (person.salam) card.appendChild(makeEl("p", "greeting", "“" + person.salam + "”"));
+        var row = makeEl("div", "contact-row");
+        row.appendChild(makeEl("span", "contact-text", person.kontak));
+        var btn = makeEl("button", "copy-btn", "Salin kontak");
+        btn.type = "button";
+        btn.setAttribute("aria-label", "Salin kontak " + person.name);
+        btn.addEventListener("click", function () { copyContact(person.kontak, person.name); });
+        row.appendChild(btn);
+        card.appendChild(row);
+        grid.appendChild(card);
+      });
+    }
+
+    function normalize(value) {
+      return value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function filterAlumni() {
+      var query = normalize(search.value.trim());
+      var filtered = alumni.filter(function (person) {
+        return normalize([person.name, person.uni, person.fakultas, person.jurusan, person.year].join(" ")).indexOf(query) !== -1;
+      });
+      render(filtered);
+    }
+
+    function updateCountdown() {
+      var clock = document.getElementById("countdownClock");
+      var longLabel = document.getElementById("countdownLong");
+      var shortLabel = document.getElementById("countdownShort");
+      var remaining = new Date(COUNTDOWN_TARGET).getTime() - Date.now();
+
+      if (remaining <= 0) {
+        longLabel.textContent = "Menunggu jadwal resmi";
+        shortLabel.textContent = "Menunggu jadwal";
+        clock.setAttribute("aria-label", "Target estimasi telah lewat; menunggu jadwal resmi UTBK-SNBT");
+        return false;
+      }
+
+      var totalMinutes = Math.floor(remaining / 60000);
+      var fullDays = Math.floor(totalMinutes / 1440);
+      var hDays = Math.ceil(remaining / 86400000);
+      var hours = Math.floor((totalMinutes % 1440) / 60);
+      var minutes = totalMinutes % 60;
+
+      shortLabel.textContent = "H-" + hDays;
+      longLabel.textContent = "H-" + fullDays + " · " + hours + "j " + minutes + "m";
+      clock.setAttribute("aria-label", fullDays + " hari, " + hours + " jam, dan " + minutes + " menit menuju perkiraan pelaksanaan UTBK-SNBT 2027");
+      return true;
+    }
+
+    search.addEventListener("input", filterAlumni);
+    render(alumni);
+    updateCountdown();
+    var countdownTimer = setInterval(function () {
+      if (!updateCountdown()) clearInterval(countdownTimer);
+    }, 60000);
+  </script>
+</body>
+</html>
