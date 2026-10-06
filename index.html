@@ -1794,16 +1794,16 @@
       </div>
     </section>
 
-    <!-- MENFESS SAMBANDHA SMANCA — disisipkan otomatis saat deploy (lihat deploy-notes.md) -->
+    <!-- MENFESS TANYA ALUMNI — disisipkan otomatis saat deploy (lihat deploy-notes.md) -->
 <section class="section" id="menfess" aria-labelledby="menfess-title">
   <div class="wrap">
-    <p class="eyebrow">Papan anonim</p>
-    <h2 id="menfess-title">Menfess Sambandha SMANCA</h2>
-    <p class="menfess-desc">Punya unek-unek, pertanyaan, atau pengakuan seputar SNPMB, beasiswa, jurusan, dan kehidupan kuliah? Kirim anonim di sini — langsung tampil, dan siapa pun bisa membalas langsung di bawahnya.</p>
+    <p class="eyebrow">Siswa bertanya, alumni menjawab</p>
+    <h2 id="menfess-title">Menfess Tanya Alumni</h2>
+    <p class="menfess-desc">Siswa SMANCA punya pertanyaan seputar SNPMB, beasiswa, jurusan, atau kehidupan kuliah? Kirim anonim di sini — kakak-kakak alumni menjawab langsung di bawahnya. Balasan berlabel <b>Alumni</b> berarti penjawab mengidentifikasi diri sebagai alumni SMANCA.</p>
     <form id="menfessForm" class="menfess-form" novalidate>
       <label class="menfess-field">
-        <span class="menfess-label">Menfess-mu <b aria-hidden="true">*</b></span>
-        <textarea id="menfessText" rows="4" maxlength="2000" required placeholder="Tulis menfess-mu di sini…"></textarea>
+        <span class="menfess-label">Pertanyaanmu <b aria-hidden="true">*</b></span>
+        <textarea id="menfessText" rows="4" maxlength="2000" required placeholder="Tulis pertanyaanmu di sini…"></textarea>
         <small class="menfess-count"><span id="menfessCount">0</span>/2000</small>
       </label>
       <label class="menfess-field">
@@ -1843,10 +1843,13 @@
 .menfess-reply{border-top:1px dashed var(--line);padding-top:.7rem;margin-top:.7rem}
 .menfess-reply p{margin:0 0 .3rem}
 .menfess-reply small{color:var(--muted)}
+.menfess-alumni-badge{background:var(--green);color:#fff;border-radius:999px;padding:.1rem .6rem;font-size:.75rem;font-weight:700}
 .menfess-reply-form{border-top:1px dashed var(--line);padding-top:.8rem;margin-top:.8rem}
 .menfess-reply-form textarea{width:100%;border:1px solid var(--line);border-radius:.6rem;padding:.6rem .7rem;font:inherit;background:var(--page);color:var(--ink);box-sizing:border-box;margin-bottom:.5rem}
 .menfess-reply-form input[type=text]{width:100%;border:1px solid var(--line);border-radius:.6rem;padding:.6rem .7rem;font:inherit;background:var(--page);color:var(--ink);box-sizing:border-box;margin-bottom:.5rem}
 .menfess-reply-form textarea:focus,.menfess-reply-form input[type=text]:focus{outline:2px solid var(--green);border-color:var(--green)}
+.menfess-check{display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem;font-size:.9rem;cursor:pointer}
+.menfess-check input{width:1rem;height:1rem;accent-color:var(--green)}
 .menfess-reply-btn{background:var(--green-soft);color:var(--green-deep);border:0;border-radius:.6rem;padding:.55rem 1.1rem;font:inherit;font-weight:700;cursor:pointer}
 .menfess-reply-btn:hover{background:var(--green);color:#fff}
 .menfess-reply-btn:disabled{opacity:.6;cursor:wait}
@@ -1900,6 +1903,12 @@
       });
   }
 
+  function replyLabel(a){
+    var base = a.answered_by || 'Anonim';
+    if (a.is_alumni) base += ' · ' + (a.alumni_info || 'Alumni SMANCA');
+    return '— ' + base;
+  }
+
   function renderFeed(feed, items){
     feed.innerHTML = '';
     if (!items || !items.length){
@@ -1917,7 +1926,13 @@
       (item.answers || []).forEach(function(a){
         var ans = el('div', 'menfess-reply');
         ans.appendChild(el('p', null, a.answer_text));
-        ans.appendChild(el('small', null, '— ' + (a.answered_by || 'Anonim')));
+        var lab = el('small', null, replyLabel(a));
+        if (a.is_alumni){
+          var badge = el('span', 'menfess-alumni-badge', 'Alumni');
+          lab.appendChild(document.createTextNode(' '));
+          lab.appendChild(badge);
+        }
+        ans.appendChild(lab);
         card.appendChild(ans);
       });
       card.appendChild(buildReplyForm(item.id));
@@ -1929,6 +1944,13 @@
     var wrap = el('div', 'menfess-reply-form');
     var ta = el('textarea'); ta.rows = 2; ta.maxLength = 2000; ta.placeholder = 'Tulis balasan…';
     var nick = el('input'); nick.type = 'text'; nick.maxLength = 60; nick.placeholder = 'Nama samaran (opsional)';
+    var checkLabel = el('label', 'menfess-check');
+    var check = el('input'); check.type = 'checkbox';
+    checkLabel.appendChild(check);
+    checkLabel.appendChild(el('span', null, 'Saya alumni SMANCA'));
+    var info = el('input'); info.type = 'text'; info.maxLength = 120;
+    info.placeholder = 'Kampus & jurusan (opsional)'; info.style.display = 'none';
+    check.addEventListener('change', function(){ info.style.display = check.checked ? '' : 'none'; });
     var btn = el('button', 'menfess-reply-btn', 'Balas');
     var rmsg = el('p', 'menfess-reply-msg');
     function setRMsg(text, ok){
@@ -1946,7 +1968,9 @@
         body: JSON.stringify({
           question_id: questionId,
           answer_text: txt,
-          answered_by: nick.value.trim() || null
+          answered_by: nick.value.trim() || null,
+          is_alumni: check.checked,
+          alumni_info: check.checked ? (info.value.trim() || null) : null
         })
       }).then(function(res){
         if (!res.ok) throw new Error('HTTP ' + res.status);
@@ -1957,7 +1981,9 @@
         btn.disabled = false;
       });
     });
-    wrap.appendChild(ta); wrap.appendChild(nick); wrap.appendChild(btn); wrap.appendChild(rmsg);
+    wrap.appendChild(ta); wrap.appendChild(nick);
+    wrap.appendChild(checkLabel); wrap.appendChild(info);
+    wrap.appendChild(btn); wrap.appendChild(rmsg);
     return wrap;
   }
 
