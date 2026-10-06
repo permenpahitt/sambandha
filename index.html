@@ -287,46 +287,39 @@
 
     .school-strip {
       display: grid;
-      grid-template-columns: minmax(220px, .75fr) minmax(0, 1.25fr) auto;
-      gap: clamp(22px, 4vw, 54px);
+      grid-template-columns: minmax(210px, .8fr) minmax(0, 1.7fr) auto;
+      gap: clamp(20px, 3.5vw, 46px);
       align-items: center;
-      margin-top: -28px;
-      padding: 24px 28px;
+      padding: 18px 22px;
       background: var(--green-deep);
       color: var(--page);
-      box-shadow: var(--shadow);
     }
     .school-strip h2 {
-      margin: 0 0 5px;
-      font-size: clamp(1.55rem, 2.3vw, 2.15rem);
-      letter-spacing: -.025em;
-      line-height: 1;
-    }
-    .school-strip .school-note {
       margin: 0;
-      color: color-mix(in srgb, var(--page) 72%, transparent);
-      font-size: .78rem;
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      letter-spacing: -.02em;
+      line-height: 1.08;
     }
     .school-facts {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
+      gap: 16px;
       margin: 0;
     }
     .school-facts div { min-width: 0; }
     .school-facts dt {
-      margin-bottom: 3px;
-      color: color-mix(in srgb, var(--page) 62%, transparent);
-      font-size: .68rem;
+      margin-bottom: 2px;
+      color: color-mix(in srgb, var(--page) 58%, transparent);
+      font-size: .62rem;
       font-weight: 700;
-      letter-spacing: .06em;
+      letter-spacing: .055em;
       text-transform: uppercase;
     }
-    .school-facts dd { margin: 0; font-size: .8rem; font-weight: 600; line-height: 1.35; }
+    .school-facts dd { margin: 0; font-size: .74rem; font-weight: 600; line-height: 1.3; }
     .school-site {
       white-space: nowrap;
       color: var(--yellow);
-      font-size: .78rem;
+      font-size: .74rem;
       font-weight: 700;
       text-underline-offset: 4px;
     }
@@ -1016,6 +1009,7 @@
     .group-link:hover { background: color-mix(in srgb, var(--page) 9%, transparent); border-color: var(--yellow); }
     .group-link strong { display: block; }
     .group-link small { color: color-mix(in srgb, var(--page) 65%, transparent); }
+    .group-link small a { color: inherit; overflow-wrap: anywhere; text-underline-offset: 3px; }
     .group-link svg { width: 24px; height: 24px; flex: none; fill: none; stroke: var(--yellow); stroke-width: 2; }
     .official-panel { margin-top: 16px; padding: 28px; border: 1px solid var(--line); background: var(--page); }
     .official-panel h3 { margin: 0 0 18px; font-family: var(--serif); font-size: 1.7rem; }
@@ -1053,7 +1047,7 @@
     @media (max-width: 850px) {
       .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 52px; }
       .hero-art { min-height: 350px; max-width: 560px; width: 100%; margin-inline: auto; }
-      .school-strip { grid-template-columns: 1fr; gap: 18px; margin-top: -20px; }
+      .school-strip { grid-template-columns: 1fr; gap: 16px; } 
       .school-facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .section-head, .contact-panel, .schedule-head, .practice-head, .alternative-head, .ukt-panel, .faq-layout { grid-template-columns: 1fr; }
       .faq-intro { position: static; }
@@ -1081,7 +1075,7 @@
       .sun { width: 120px; }
       .campus-frame { inset: 35px 0 18px 4%; }
       .note-card { padding: 14px; }
-      .school-strip { padding: 22px 20px; }
+      .school-strip { padding: 20px; }
       .school-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 18px; }
       .school-site { white-space: normal; }
       .section { padding-block: 62px; }
@@ -1190,7 +1184,6 @@
     <aside class="school-strip wrap" aria-labelledby="about-smanca">
       <div>
         <h2 id="about-smanca">SMA Negeri 1 Candimulyo</h2>
-        <p class="school-note">SMANCA · satu-satunya SMA Negeri di Kecamatan Candimulyo, Kabupaten Magelang.</p>
       </div>
       <dl class="school-facts">
         <div><dt>Berdiri</dt><dd>26 Oktober 1995</dd></div>
@@ -1801,6 +1794,161 @@
       </div>
     </section>
 
+    <!-- TANYA JAWAB ANONIM — disisipkan otomatis saat deploy (lihat deploy-notes.md) -->
+<section class="section" id="tanya-jawab" aria-labelledby="tanya-jawab-title">
+  <div class="wrap">
+    <p class="eyebrow">Ruang tanya jawab</p>
+    <h2 id="tanya-jawab-title">Tanya Jawab Anonim</h2>
+    <p class="tanya-desc">Punya pertanyaan seputar SNPMB, beasiswa, jurusan, atau kehidupan kuliah? Tulis di sini — boleh anonim sepenuhnya. Pertanyaan yang masuk dikurasi dan dijawab oleh kakak-kakak alumni.</p>
+    <form id="tanyaForm" class="tanya-form" novalidate>
+      <label class="tanya-field">
+        <span class="tanya-label">Pertanyaanmu <b aria-hidden="true">*</b></span>
+        <textarea id="tanyaText" rows="4" maxlength="2000" required placeholder="Tulis pertanyaanmu untuk kakak-kakak alumni sejelas mungkin…"></textarea>
+        <small class="tanya-count"><span id="tanyaCount">0</span>/2000</small>
+      </label>
+      <label class="tanya-field">
+        <span class="tanya-label">Ditujukan untuk kakak alumni yang seperti apa? <i>(opsional)</i></span>
+        <input id="tanyaTarget" type="text" maxlength="120" placeholder="Contoh: kakak Teknik Informatika ITS">
+      </label>
+      <label class="tanya-field">
+        <span class="tanya-label">Nama samaran <i>(opsional)</i></span>
+        <input id="tanyaNick" type="text" maxlength="60" placeholder="Kosongkan untuk anonim penuh">
+      </label>
+      <button type="submit" class="tanya-submit" id="tanyaSubmit">Kirim Pertanyaan</button>
+      <p class="tanya-msg" id="tanyaMsg" role="status" aria-live="polite"></p>
+    </form>
+    <h3 class="tanya-feed-title">Pertanyaan yang sudah dijawab</h3>
+    <div id="tanyaFeed" class="tanya-feed">
+      <p class="tanya-loading">Memuat pertanyaan…</p>
+    </div>
+  </div>
+</section>
+<style>
+#tanya-jawab .tanya-desc{color:var(--muted);max-width:44rem;margin:.4rem 0 1.4rem}
+.tanya-form{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.25rem;max-width:44rem;box-shadow:var(--shadow);margin-bottom:2rem}
+.tanya-field{display:block;margin-bottom:1rem}
+.tanya-label{display:block;font-weight:600;margin-bottom:.4rem}
+.tanya-label i{font-weight:400;color:var(--muted)}
+.tanya-label b{color:var(--orange)}
+.tanya-form textarea,.tanya-form input[type=text]{width:100%;border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;font:inherit;background:var(--page);color:var(--ink);box-sizing:border-box}
+.tanya-form textarea:focus,.tanya-form input[type=text]:focus{outline:2px solid var(--green);border-color:var(--green)}
+.tanya-count{display:block;text-align:right;color:var(--muted);font-size:.8rem;margin-top:.25rem}
+.tanya-submit{background:var(--green);color:#fff;border:0;border-radius:.7rem;padding:.8rem 1.4rem;font:inherit;font-weight:700;cursor:pointer}
+.tanya-submit:hover{background:var(--green-deep)}
+.tanya-submit:disabled{opacity:.6;cursor:wait}
+.tanya-msg{margin:.8rem 0 0;font-weight:600}
+.tanya-msg.ok{color:var(--green)}
+.tanya-msg.err{color:var(--orange)}
+.tanya-feed-title{margin:0 0 1rem;font-size:1.25rem}
+.tanya-feed{display:grid;gap:1rem;max-width:44rem}
+.tanya-card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow)}
+.tanya-q{font-weight:600;margin:0 0 .5rem;font-size:1.05rem}
+.tanya-meta{color:var(--muted);font-size:.85rem;margin-bottom:.8rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.tanya-badge{background:var(--green-soft);color:var(--green-deep);border-radius:999px;padding:.15rem .7rem;font-size:.8rem;font-weight:600}
+.tanya-answer{border-top:1px dashed var(--line);padding-top:.8rem;margin-top:.8rem}
+.tanya-answer p{margin:0 0 .35rem}
+.tanya-answer small{color:var(--muted)}
+.tanya-loading,.tanya-empty{color:var(--muted)}
+</style>
+<script>
+(function(){
+  var SUPA_URL = 'https://jogjkjymlnujckukzeyg.supabase.co';
+  var SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpvZ2pranltbG51amNrdWt6ZXlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEyNjEzMDMsImV4cCI6MjEwNjgzNzMwM30.wU-JcYvNGERDYs9-dPndizTSlraNBfwPDwgM7PnIqow';
+  function apiHeaders(json){
+    var h = { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY };
+    if (json) h['Content-Type'] = 'application/json';
+    return h;
+  }
+  function el(tag, cls, text){
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined && text !== null) e.textContent = text;
+    return e;
+  }
+  function fmtDate(iso){
+    try { return new Date(iso).toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' }); }
+    catch(e){ return ''; }
+  }
+
+  /* penghitung karakter */
+  var textArea = document.getElementById('tanyaText');
+  var count = document.getElementById('tanyaCount');
+  if (textArea && count) textArea.addEventListener('input', function(){ count.textContent = textArea.value.length; });
+
+  /* kirim pertanyaan */
+  var form = document.getElementById('tanyaForm');
+  var msg = document.getElementById('tanyaMsg');
+  var submitBtn = document.getElementById('tanyaSubmit');
+  function setMsg(text, ok){
+    msg.textContent = text;
+    msg.className = 'tanya-msg ' + (ok ? 'ok' : 'err');
+  }
+  if (form) form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var q = textArea.value.trim();
+    if (q.length < 10) { setMsg('Pertanyaan minimal 10 karakter ya.', false); textArea.focus(); return; }
+    var target = document.getElementById('tanyaTarget').value.trim();
+    var nick = document.getElementById('tanyaNick').value.trim();
+    submitBtn.disabled = true;
+    setMsg('Mengirim…', true);
+    fetch(SUPA_URL + '/rest/v1/questions', {
+      method: 'POST',
+      headers: apiHeaders(true),
+      body: JSON.stringify({
+        question_text: q,
+        target_alumni: target || null,
+        nickname: nick || null
+      })
+    }).then(function(res){
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      setMsg('Pertanyaanmu masuk antrean moderasi dan akan tampil setelah disetujui.', true);
+      form.reset(); count.textContent = '0';
+    }).catch(function(){
+      setMsg('Gagal mengirim, coba lagi.', false);
+    }).finally(function(){
+      submitBtn.disabled = false;
+    });
+  });
+
+  /* feed publik */
+  var feed = document.getElementById('tanyaFeed');
+  function renderFeed(items){
+    feed.innerHTML = '';
+    if (!items || !items.length){
+      feed.appendChild(el('p', 'tanya-empty', 'Belum ada pertanyaan yang disetujui. Jadilah yang pertama bertanya!'));
+      return;
+    }
+    items.forEach(function(item){
+      var card = el('article', 'tanya-card');
+      card.appendChild(el('p', 'tanya-q', item.question_text));
+      var meta = el('div', 'tanya-meta');
+      meta.appendChild(el('span', null, item.nickname || 'Anonim'));
+      meta.appendChild(el('span', null, '·'));
+      meta.appendChild(el('time', null, fmtDate(item.created_at)));
+      if (item.target_alumni) meta.appendChild(el('span', 'tanya-badge', 'Untuk: ' + item.target_alumni));
+      card.appendChild(meta);
+      (item.answers || []).forEach(function(a){
+        var ans = el('div', 'tanya-answer');
+        ans.appendChild(el('p', null, a.answer_text));
+        ans.appendChild(el('small', null, '— ' + (a.answered_by || 'Alumni')));
+        card.appendChild(ans);
+      });
+      feed.appendChild(card);
+    });
+  }
+  if (feed){
+    fetch(SUPA_URL + '/rest/v1/questions?status=eq.approved&select=*,answers(*)&order=created_at.desc', { headers: apiHeaders(false) })
+      .then(function(res){ if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then(renderFeed)
+      .catch(function(){
+        feed.innerHTML = '';
+        feed.appendChild(el('p', 'tanya-empty', 'Gagal memuat pertanyaan. Coba muat ulang halaman.'));
+      });
+  }
+})();
+</script>
+
+
     <section class="section alt" id="terhubung">
       <div class="wrap">
         <div class="contact-panel">
@@ -1821,6 +1969,10 @@
             </div>
             <div class="group-link">
               <span><strong>Subgrup Kedinasan / TNI / Polri</strong><small>Ruang bahasan jalur kedinasan · minta tautan undangan kepada pengurus</small></span>
+            </div>
+            <div class="group-link">
+              <span><strong>Email resmi Sambandha SMANCA</strong><small><a href="mailto:sambandhasmanca@gmail.com">sambandhasmanca@gmail.com</a></small></span>
+              <button class="copy-btn" id="copyOfficialEmail" type="button" aria-label="Salin email resmi Sambandha SMANCA">Salin email</button>
             </div>
           </div>
         </div>
@@ -1929,6 +2081,10 @@
         showToast("Kontak: " + value);
       }
     }
+
+    document.getElementById("copyOfficialEmail").addEventListener("click", function () {
+      copyContact("sambandhasmanca@gmail.com", "Sambandha SMANCA");
+    });
 
     function render(list) {
       grid.textContent = "";
