@@ -162,6 +162,7 @@
     }
     .dropdown-menu a:hover,
     .dropdown-menu a:focus-visible { color: var(--green-deep); background: var(--green-soft); }
+    .topnav .nav-dropdown:last-child .dropdown-menu { left: auto; right: 0; }
     .nav-dropdown.open .dropdown-menu {
       opacity: 1;
       visibility: visible;
@@ -1143,7 +1144,15 @@
       </div>
     </div>
     <a href="#alumni">Direktori alumni</a>
-    <a href="#terhubung">Terhubung</a>
+    <div class="nav-dropdown" id="terhubungNavDropdown">
+      <button class="nav-trigger" id="terhubungNavTrigger" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="terhubungNavMenu">
+        Terhubung <span class="nav-chevron" aria-hidden="true"></span>
+      </button>
+      <div class="dropdown-menu" id="terhubungNavMenu" aria-label="Navigasi terhubung" hidden>
+        <a href="#menfess">Menfess Tanya Alumni</a>
+        <a href="#terhubung">Hubungi</a>
+      </div>
+    </div>
   </nav>
 
   <main>
@@ -1799,7 +1808,7 @@
   <div class="wrap">
     <p class="eyebrow">Siswa bertanya, alumni menjawab</p>
     <h2 id="menfess-title">Menfess Tanya Alumni</h2>
-    <p class="menfess-desc">Siswa SMANCA punya pertanyaan seputar SNPMB, beasiswa, jurusan, atau kehidupan kuliah? Kirim anonim di sini — kakak-kakak alumni menjawab langsung di bawahnya. Balasan berlabel <b>Alumni</b> berarti penjawab mengidentifikasi diri sebagai alumni SMANCA. Oh iya, kalau sekadar mau confess ke crush… boleh juga. Siapa tahu dibaca.</p>
+    <p class="menfess-desc">Siswa SMANCA punya pertanyaan seputar SNPMB, beasiswa, jurusan, atau kehidupan kuliah? Kirim anonim di sini — kakak-kakak alumni menjawab langsung di bawahnya. Balasan berlabel <b>Alumni</b> ditulis langsung oleh kakak alumni SMANCA. Oh iya, kalau sekadar mau confess ke crush… boleh juga. Siapa tahu dibaca.</p>
     <form id="menfessForm" class="menfess-form" novalidate>
       <label class="menfess-field">
         <span class="menfess-label">Pertanyaanmu <b aria-hidden="true">*</b></span>
@@ -2101,40 +2110,60 @@
     var resultCount = document.getElementById("resultCount");
     var toast = document.getElementById("toast");
     var toastTimer;
-    var campusNavDropdown = document.getElementById("campusNavDropdown");
-    var campusNavTrigger = document.getElementById("campusNavTrigger");
-    var campusNavMenu = document.getElementById("campusNavMenu");
+    var navDropdowns = document.querySelectorAll(".nav-dropdown");
 
-    function setCampusNav(open) {
-      campusNavDropdown.classList.toggle("open", open);
-      campusNavTrigger.setAttribute("aria-expanded", open ? "true" : "false");
-      campusNavMenu.hidden = !open;
+    function setNavDropdown(dropdown, open) {
+      var trigger = dropdown.querySelector(".nav-trigger");
+      var menu = dropdown.querySelector(".dropdown-menu");
+      dropdown.classList.toggle("open", open);
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+      menu.hidden = !open;
     }
 
-    campusNavTrigger.addEventListener("click", function (event) {
-      event.stopPropagation();
-      if (event.pointerType === "mouse") {
-        setCampusNav(true);
-      } else {
-        setCampusNav(!campusNavDropdown.classList.contains("open"));
-      }
-    });
-    campusNavDropdown.addEventListener("pointerenter", function (event) {
-      if (event.pointerType === "mouse") setCampusNav(true);
-    });
-    campusNavDropdown.addEventListener("pointerleave", function (event) {
-      if (event.pointerType === "mouse") setCampusNav(false);
+    function closeNavDropdowns(except) {
+      navDropdowns.forEach(function (dropdown) {
+        if (dropdown !== except) setNavDropdown(dropdown, false);
+      });
+    }
+
+    navDropdowns.forEach(function (dropdown) {
+      var trigger = dropdown.querySelector(".nav-trigger");
+      var menu = dropdown.querySelector(".dropdown-menu");
+
+      trigger.addEventListener("click", function (event) {
+        event.stopPropagation();
+        closeNavDropdowns(dropdown);
+        if (event.pointerType === "mouse") {
+          setNavDropdown(dropdown, true);
+        } else {
+          setNavDropdown(dropdown, !dropdown.classList.contains("open"));
+        }
+      });
+      dropdown.addEventListener("pointerenter", function (event) {
+        if (event.pointerType === "mouse") {
+          closeNavDropdowns(dropdown);
+          setNavDropdown(dropdown, true);
+        }
+      });
+      dropdown.addEventListener("pointerleave", function (event) {
+        if (event.pointerType === "mouse") setNavDropdown(dropdown, false);
+      });
+      menu.addEventListener("click", function () { setNavDropdown(dropdown, false); });
     });
 
-    campusNavMenu.addEventListener("click", function () { setCampusNav(false); });
     document.addEventListener("click", function (event) {
-      if (!campusNavDropdown.contains(event.target)) setCampusNav(false);
+      navDropdowns.forEach(function (dropdown) {
+        if (!dropdown.contains(event.target)) setNavDropdown(dropdown, false);
+      });
     });
     document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape" && campusNavDropdown.classList.contains("open")) {
-        setCampusNav(false);
-        campusNavTrigger.focus();
-      }
+      if (event.key !== "Escape") return;
+      navDropdowns.forEach(function (dropdown) {
+        if (dropdown.classList.contains("open")) {
+          setNavDropdown(dropdown, false);
+          dropdown.querySelector(".nav-trigger").focus();
+        }
+      });
     });
 
     function makeEl(tag, className, text) {
