@@ -1799,7 +1799,7 @@
   <div class="wrap">
     <p class="eyebrow">Siswa bertanya, alumni menjawab</p>
     <h2 id="menfess-title">Menfess Tanya Alumni</h2>
-    <p class="menfess-desc">Siswa SMANCA punya pertanyaan seputar SNPMB, beasiswa, jurusan, atau kehidupan kuliah? Kirim anonim di sini — kakak-kakak alumni menjawab langsung di bawahnya. Balasan berlabel <b>Alumni</b> berarti penjawab mengidentifikasi diri sebagai alumni SMANCA.</p>
+    <p class="menfess-desc">Siswa SMANCA punya pertanyaan seputar SNPMB, beasiswa, jurusan, atau kehidupan kuliah? Kirim anonim di sini — kakak-kakak alumni menjawab langsung di bawahnya. Balasan berlabel <b>Alumni</b> berarti penjawab mengidentifikasi diri sebagai alumni SMANCA. Oh iya, kalau sekadar mau confess ke crush… boleh juga. Siapa tahu dibaca.</p>
     <form id="menfessForm" class="menfess-form" novalidate>
       <label class="menfess-field">
         <span class="menfess-label">Pertanyaanmu <b aria-hidden="true">*</b></span>
@@ -1813,6 +1813,15 @@
       <button type="submit" class="menfess-submit" id="menfessSubmit">Kirim Menfess</button>
       <p class="menfess-msg" id="menfessMsg" role="status" aria-live="polite"></p>
     </form>
+    <div class="menfess-norms" role="note">
+      <strong>Tata krama ruang ini</strong>
+      <ul>
+        <li>Ini ruang umum — jaga bahasa dan adab dalam setiap kiriman.</li>
+        <li>Dilarang: ujaran kebencian/SARA, perundungan, konten pornografi, dan menyebar data pribadi orang lain.</li>
+        <li>Anonimitas bukan alasan untuk menyakiti orang lain.</li>
+        <li>Kiriman yang melanggar akan disembunyikan oleh pengurus.</li>
+      </ul>
+    </div>
     <h3 class="menfess-feed-title">Linimasa</h3>
     <div id="menfessFeed" class="menfess-feed">
       <p class="menfess-loading">Memuat menfess…</p>
@@ -1835,6 +1844,10 @@
 .menfess-msg{margin:.8rem 0 0;font-weight:600}
 .menfess-msg.ok{color:var(--green)}
 .menfess-msg.err{color:var(--orange)}
+.menfess-norms{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:.8rem;padding:.9rem 1.1rem;max-width:44rem;margin:0 0 1.6rem;font-size:.9rem;box-shadow:var(--shadow)}
+.menfess-norms strong{display:block;margin-bottom:.3rem}
+.menfess-norms ul{margin:.3rem 0 0;padding-left:1.2rem}
+.menfess-norms li{margin-bottom:.25rem;color:var(--muted)}
 .menfess-feed-title{margin:0 0 1rem;font-size:1.25rem}
 .menfess-feed{display:grid;gap:1rem;max-width:44rem}
 .menfess-card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow)}
