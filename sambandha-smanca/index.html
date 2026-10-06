@@ -1183,7 +1183,7 @@
             </g>
           </svg>
         </div>
-        <div class="note-card"><strong>19 alumni</strong><span>lintas kampus dan program studi, siap ditemukan.</span></div>
+        <div class="note-card"><strong>22 alumni</strong><span>lintas kampus dan program studi, siap ditemukan.</span></div>
       </div>
     </section>
 
@@ -1856,7 +1856,10 @@
       {name:"Zafran Maulana Hamid",uni:"Universitas Tidar",fakultas:"Ilmu Sosial dan Ilmu Politik",jurusan:"Ilmu Komunikasi",year:"2025",kontak:"@zfranmaulana",salam:"Sekolah sing bener, kuliah cumlaude, kerja kepenak, tumbas Harley"},
       {name:"Ratna Syaidatun Rofiah",uni:"Universitas Tidar",fakultas:"Ilmu Sosial dan Ilmu Politik",jurusan:"Ilmu Komunikasi",year:"2025",kontak:"ratnasyaidatunn",salam:"semangat nyakkk"},
       {name:"Finja Abi Azzahra",uni:"Universitas Tidar",fakultas:"Fakultas Pertanian",jurusan:"Gizi",year:"2026",kontak:"@_finjaazzahra",salam:"hallo semuanya, salam kenall hihi"},
-      {name:"Yosua Mulyo Nugroho",uni:"Universitas Sebelas Maret",fakultas:"Fakultas Pertanian",jurusan:"Soil Science",year:"2023",kontak:"yosuamlyoz",salam:"halo semuanya, selamat berjuang dan berproses"}
+      {name:"Yosua Mulyo Nugroho",uni:"Universitas Sebelas Maret",fakultas:"Fakultas Pertanian",jurusan:"Soil Science",year:"2023",kontak:"yosuamlyoz",salam:"halo semuanya, selamat berjuang dan berproses"},
+      {name:"Sani Aulia",uni:"Universitas Tidar",fakultas:"Fakultas Ekonomi",jurusan:"S1 Akuntansi",year:"2026",status:"Mahasiswa",kontak:"instagram: @ssaniawade",salam:"everything you lose is a step you take."},
+      {name:"ZULFIAN SYIFAULINNAS",uni:"PIP MAKASSAR",fakultas:"Nautika",jurusan:"Nautika",year:"2023",status:"Mahasiswa",kontak:"085601727407",salam:"Dari smanca untuk indonesia"},
+      {name:"Muhammad Syafiq Azizi",uni:"Universitas Tidar",fakultas:"Fakultas Teknik",jurusan:"S1 Teknologi Informasi",year:"2025",status:"Mahasiswa",kontak:"Ig: zizilyy_",salam:"Semangat dalam belajar untuk mengapai univ impian kalian temen temen, jangan lupa juga istirahat yg cukup jangan terlalu memaksakan diri untuk belajar terus menerus karena itu tidak efisien jika tidak diimbangi dengan istirahat yang cukup dan hasilnya nanti tidak akan maksimal"}
     ];
 
     // Ganti saat jadwal resmi 2027 keluar.
@@ -1944,6 +1947,7 @@
         card.appendChild(makeEl("p", "study", person.fakultas + " · " + person.jurusan));
         var tags = makeEl("div", "meta-row");
         tags.appendChild(makeEl("span", "tag", "Angkatan " + person.year));
+        if (person.status) tags.appendChild(makeEl("span", "tag", person.status));
         card.appendChild(tags);
         if (person.salam) card.appendChild(makeEl("p", "greeting", "“" + person.salam + "”"));
         var row = makeEl("div", "contact-row");
