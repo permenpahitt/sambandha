@@ -1794,61 +1794,66 @@
       </div>
     </section>
 
-    <!-- TANYA JAWAB ANONIM — disisipkan otomatis saat deploy (lihat deploy-notes.md) -->
-<section class="section" id="tanya-jawab" aria-labelledby="tanya-jawab-title">
+    <!-- MENFESS SAMBANDHA SMANCA — disisipkan otomatis saat deploy (lihat deploy-notes.md) -->
+<section class="section" id="menfess" aria-labelledby="menfess-title">
   <div class="wrap">
-    <p class="eyebrow">Ruang tanya jawab</p>
-    <h2 id="tanya-jawab-title">Tanya Jawab Anonim</h2>
-    <p class="tanya-desc">Punya pertanyaan seputar SNPMB, beasiswa, jurusan, atau kehidupan kuliah? Tulis di sini — boleh anonim sepenuhnya. Pertanyaan yang masuk dikurasi dan dijawab oleh kakak-kakak alumni.</p>
-    <form id="tanyaForm" class="tanya-form" novalidate>
-      <label class="tanya-field">
-        <span class="tanya-label">Pertanyaanmu <b aria-hidden="true">*</b></span>
-        <textarea id="tanyaText" rows="4" maxlength="2000" required placeholder="Tulis pertanyaanmu untuk kakak-kakak alumni sejelas mungkin…"></textarea>
-        <small class="tanya-count"><span id="tanyaCount">0</span>/2000</small>
+    <p class="eyebrow">Papan anonim</p>
+    <h2 id="menfess-title">Menfess Sambandha SMANCA</h2>
+    <p class="menfess-desc">Punya unek-unek, pertanyaan, atau pengakuan seputar SNPMB, beasiswa, jurusan, dan kehidupan kuliah? Kirim anonim di sini — langsung tampil, dan siapa pun bisa membalas langsung di bawahnya.</p>
+    <form id="menfessForm" class="menfess-form" novalidate>
+      <label class="menfess-field">
+        <span class="menfess-label">Menfess-mu <b aria-hidden="true">*</b></span>
+        <textarea id="menfessText" rows="4" maxlength="2000" required placeholder="Tulis menfess-mu di sini…"></textarea>
+        <small class="menfess-count"><span id="menfessCount">0</span>/2000</small>
       </label>
-      <label class="tanya-field">
-        <span class="tanya-label">Ditujukan untuk kakak alumni yang seperti apa? <i>(opsional)</i></span>
-        <input id="tanyaTarget" type="text" maxlength="120" placeholder="Contoh: kakak Teknik Informatika ITS">
+      <label class="menfess-field">
+        <span class="menfess-label">Nama samaran <i>(opsional)</i></span>
+        <input id="menfessNick" type="text" maxlength="60" placeholder="Kosongkan untuk anonim penuh">
       </label>
-      <label class="tanya-field">
-        <span class="tanya-label">Nama samaran <i>(opsional)</i></span>
-        <input id="tanyaNick" type="text" maxlength="60" placeholder="Kosongkan untuk anonim penuh">
-      </label>
-      <button type="submit" class="tanya-submit" id="tanyaSubmit">Kirim Pertanyaan</button>
-      <p class="tanya-msg" id="tanyaMsg" role="status" aria-live="polite"></p>
+      <button type="submit" class="menfess-submit" id="menfessSubmit">Kirim Menfess</button>
+      <p class="menfess-msg" id="menfessMsg" role="status" aria-live="polite"></p>
     </form>
-    <h3 class="tanya-feed-title">Pertanyaan yang sudah dijawab</h3>
-    <div id="tanyaFeed" class="tanya-feed">
-      <p class="tanya-loading">Memuat pertanyaan…</p>
+    <h3 class="menfess-feed-title">Linimasa</h3>
+    <div id="menfessFeed" class="menfess-feed">
+      <p class="menfess-loading">Memuat menfess…</p>
     </div>
   </div>
 </section>
 <style>
-#tanya-jawab .tanya-desc{color:var(--muted);max-width:44rem;margin:.4rem 0 1.4rem}
-.tanya-form{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.25rem;max-width:44rem;box-shadow:var(--shadow);margin-bottom:2rem}
-.tanya-field{display:block;margin-bottom:1rem}
-.tanya-label{display:block;font-weight:600;margin-bottom:.4rem}
-.tanya-label i{font-weight:400;color:var(--muted)}
-.tanya-label b{color:var(--orange)}
-.tanya-form textarea,.tanya-form input[type=text]{width:100%;border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;font:inherit;background:var(--page);color:var(--ink);box-sizing:border-box}
-.tanya-form textarea:focus,.tanya-form input[type=text]:focus{outline:2px solid var(--green);border-color:var(--green)}
-.tanya-count{display:block;text-align:right;color:var(--muted);font-size:.8rem;margin-top:.25rem}
-.tanya-submit{background:var(--green);color:#fff;border:0;border-radius:.7rem;padding:.8rem 1.4rem;font:inherit;font-weight:700;cursor:pointer}
-.tanya-submit:hover{background:var(--green-deep)}
-.tanya-submit:disabled{opacity:.6;cursor:wait}
-.tanya-msg{margin:.8rem 0 0;font-weight:600}
-.tanya-msg.ok{color:var(--green)}
-.tanya-msg.err{color:var(--orange)}
-.tanya-feed-title{margin:0 0 1rem;font-size:1.25rem}
-.tanya-feed{display:grid;gap:1rem;max-width:44rem}
-.tanya-card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow)}
-.tanya-q{font-weight:600;margin:0 0 .5rem;font-size:1.05rem}
-.tanya-meta{color:var(--muted);font-size:.85rem;margin-bottom:.8rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
-.tanya-badge{background:var(--green-soft);color:var(--green-deep);border-radius:999px;padding:.15rem .7rem;font-size:.8rem;font-weight:600}
-.tanya-answer{border-top:1px dashed var(--line);padding-top:.8rem;margin-top:.8rem}
-.tanya-answer p{margin:0 0 .35rem}
-.tanya-answer small{color:var(--muted)}
-.tanya-loading,.tanya-empty{color:var(--muted)}
+#menfess .menfess-desc{color:var(--muted);max-width:44rem;margin:.4rem 0 1.4rem}
+.menfess-form{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.25rem;max-width:44rem;box-shadow:var(--shadow);margin-bottom:2rem}
+.menfess-field{display:block;margin-bottom:1rem}
+.menfess-label{display:block;font-weight:600;margin-bottom:.4rem}
+.menfess-label i{font-weight:400;color:var(--muted)}
+.menfess-label b{color:var(--orange)}
+.menfess-form textarea,.menfess-form input[type=text]{width:100%;border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;font:inherit;background:var(--page);color:var(--ink);box-sizing:border-box}
+.menfess-form textarea:focus,.menfess-form input[type=text]:focus{outline:2px solid var(--green);border-color:var(--green)}
+.menfess-count{display:block;text-align:right;color:var(--muted);font-size:.8rem;margin-top:.25rem}
+.menfess-submit{background:var(--green);color:#fff;border:0;border-radius:.7rem;padding:.8rem 1.4rem;font:inherit;font-weight:700;cursor:pointer}
+.menfess-submit:hover{background:var(--green-deep)}
+.menfess-submit:disabled{opacity:.6;cursor:wait}
+.menfess-msg{margin:.8rem 0 0;font-weight:600}
+.menfess-msg.ok{color:var(--green)}
+.menfess-msg.err{color:var(--orange)}
+.menfess-feed-title{margin:0 0 1rem;font-size:1.25rem}
+.menfess-feed{display:grid;gap:1rem;max-width:44rem}
+.menfess-card{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.1rem 1.25rem;box-shadow:var(--shadow)}
+.menfess-q{margin:0 0 .5rem;font-size:1.05rem}
+.menfess-meta{color:var(--muted);font-size:.85rem;margin-bottom:.6rem;display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.menfess-reply{border-top:1px dashed var(--line);padding-top:.7rem;margin-top:.7rem}
+.menfess-reply p{margin:0 0 .3rem}
+.menfess-reply small{color:var(--muted)}
+.menfess-reply-form{border-top:1px dashed var(--line);padding-top:.8rem;margin-top:.8rem}
+.menfess-reply-form textarea{width:100%;border:1px solid var(--line);border-radius:.6rem;padding:.6rem .7rem;font:inherit;background:var(--page);color:var(--ink);box-sizing:border-box;margin-bottom:.5rem}
+.menfess-reply-form input[type=text]{width:100%;border:1px solid var(--line);border-radius:.6rem;padding:.6rem .7rem;font:inherit;background:var(--page);color:var(--ink);box-sizing:border-box;margin-bottom:.5rem}
+.menfess-reply-form textarea:focus,.menfess-reply-form input[type=text]:focus{outline:2px solid var(--green);border-color:var(--green)}
+.menfess-reply-btn{background:var(--green-soft);color:var(--green-deep);border:0;border-radius:.6rem;padding:.55rem 1.1rem;font:inherit;font-weight:700;cursor:pointer}
+.menfess-reply-btn:hover{background:var(--green);color:#fff}
+.menfess-reply-btn:disabled{opacity:.6;cursor:wait}
+.menfess-reply-msg{font-size:.85rem;font-weight:600;margin:.4rem 0 0}
+.menfess-reply-msg.ok{color:var(--green)}
+.menfess-reply-msg.err{color:var(--orange)}
+.menfess-loading,.menfess-empty{color:var(--muted)}
 </style>
 <script>
 (function(){
@@ -1870,39 +1875,108 @@
     catch(e){ return ''; }
   }
 
-  /* penghitung karakter */
-  var textArea = document.getElementById('tanyaText');
-  var count = document.getElementById('tanyaCount');
+  var textArea = document.getElementById('menfessText');
+  var count = document.getElementById('menfessCount');
   if (textArea && count) textArea.addEventListener('input', function(){ count.textContent = textArea.value.length; });
 
-  /* kirim pertanyaan */
-  var form = document.getElementById('tanyaForm');
-  var msg = document.getElementById('tanyaMsg');
-  var submitBtn = document.getElementById('tanyaSubmit');
+  var form = document.getElementById('menfessForm');
+  var msg = document.getElementById('menfessMsg');
+  var submitBtn = document.getElementById('menfessSubmit');
   function setMsg(text, ok){
     msg.textContent = text;
-    msg.className = 'tanya-msg ' + (ok ? 'ok' : 'err');
+    msg.className = 'menfess-msg ' + (ok ? 'ok' : 'err');
   }
+
+  function loadFeed(){
+    var feed = document.getElementById('menfessFeed');
+    feed.innerHTML = '';
+    feed.appendChild(el('p', 'menfess-loading', 'Memuat menfess…'));
+    fetch(SUPA_URL + '/rest/v1/questions?status=neq.rejected&select=*,answers(*)&answers.order=created_at.asc&order=created_at.desc', { headers: apiHeaders(false) })
+      .then(function(res){ if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then(function(items){ renderFeed(feed, items); })
+      .catch(function(){
+        feed.innerHTML = '';
+        feed.appendChild(el('p', 'menfess-empty', 'Gagal memuat menfess. Coba muat ulang halaman.'));
+      });
+  }
+
+  function renderFeed(feed, items){
+    feed.innerHTML = '';
+    if (!items || !items.length){
+      feed.appendChild(el('p', 'menfess-empty', 'Belum ada menfess. Jadilah yang pertama mengirim!'));
+      return;
+    }
+    items.forEach(function(item){
+      var card = el('article', 'menfess-card');
+      card.appendChild(el('p', 'menfess-q', item.question_text));
+      var meta = el('div', 'menfess-meta');
+      meta.appendChild(el('span', null, item.nickname || 'Anonim'));
+      meta.appendChild(el('span', null, '·'));
+      meta.appendChild(el('time', null, fmtDate(item.created_at)));
+      card.appendChild(meta);
+      (item.answers || []).forEach(function(a){
+        var ans = el('div', 'menfess-reply');
+        ans.appendChild(el('p', null, a.answer_text));
+        ans.appendChild(el('small', null, '— ' + (a.answered_by || 'Anonim')));
+        card.appendChild(ans);
+      });
+      card.appendChild(buildReplyForm(item.id));
+      feed.appendChild(card);
+    });
+  }
+
+  function buildReplyForm(questionId){
+    var wrap = el('div', 'menfess-reply-form');
+    var ta = el('textarea'); ta.rows = 2; ta.maxLength = 2000; ta.placeholder = 'Tulis balasan…';
+    var nick = el('input'); nick.type = 'text'; nick.maxLength = 60; nick.placeholder = 'Nama samaran (opsional)';
+    var btn = el('button', 'menfess-reply-btn', 'Balas');
+    var rmsg = el('p', 'menfess-reply-msg');
+    function setRMsg(text, ok){
+      rmsg.textContent = text;
+      rmsg.className = 'menfess-reply-msg ' + (ok ? 'ok' : 'err');
+    }
+    btn.addEventListener('click', function(){
+      var txt = ta.value.trim();
+      if (txt.length < 1) { setRMsg('Balasan tidak boleh kosong.', false); ta.focus(); return; }
+      btn.disabled = true;
+      setRMsg('Mengirim…', true);
+      fetch(SUPA_URL + '/rest/v1/answers', {
+        method: 'POST',
+        headers: apiHeaders(true),
+        body: JSON.stringify({
+          question_id: questionId,
+          answer_text: txt,
+          answered_by: nick.value.trim() || null
+        })
+      }).then(function(res){
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        setRMsg('Balasan terkirim.', true);
+        loadFeed();
+      }).catch(function(){
+        setRMsg('Gagal mengirim balasan, coba lagi.', false);
+        btn.disabled = false;
+      });
+    });
+    wrap.appendChild(ta); wrap.appendChild(nick); wrap.appendChild(btn); wrap.appendChild(rmsg);
+    return wrap;
+  }
+
   if (form) form.addEventListener('submit', function(ev){
     ev.preventDefault();
     var q = textArea.value.trim();
-    if (q.length < 10) { setMsg('Pertanyaan minimal 10 karakter ya.', false); textArea.focus(); return; }
-    var target = document.getElementById('tanyaTarget').value.trim();
-    var nick = document.getElementById('tanyaNick').value.trim();
+    if (q.length < 10) { setMsg('Menfess minimal 10 karakter ya.', false); textArea.focus(); return; }
+    var nick = document.getElementById('menfessNick').value.trim();
     submitBtn.disabled = true;
     setMsg('Mengirim…', true);
     fetch(SUPA_URL + '/rest/v1/questions', {
       method: 'POST',
       headers: apiHeaders(true),
-      body: JSON.stringify({
-        question_text: q,
-        target_alumni: target || null,
-        nickname: nick || null
-      })
+      body: JSON.stringify({ question_text: q, target_alumni: null, nickname: nick || null })
     }).then(function(res){
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      setMsg('Pertanyaanmu masuk antrean moderasi dan akan tampil setelah disetujui.', true);
+      setMsg('Menfess terkirim dan langsung tampil di linimasa.', true);
       form.reset(); count.textContent = '0';
+      loadFeed();
     }).catch(function(){
       setMsg('Gagal mengirim, coba lagi.', false);
     }).finally(function(){
@@ -1910,41 +1984,7 @@
     });
   });
 
-  /* feed publik */
-  var feed = document.getElementById('tanyaFeed');
-  function renderFeed(items){
-    feed.innerHTML = '';
-    if (!items || !items.length){
-      feed.appendChild(el('p', 'tanya-empty', 'Belum ada pertanyaan yang disetujui. Jadilah yang pertama bertanya!'));
-      return;
-    }
-    items.forEach(function(item){
-      var card = el('article', 'tanya-card');
-      card.appendChild(el('p', 'tanya-q', item.question_text));
-      var meta = el('div', 'tanya-meta');
-      meta.appendChild(el('span', null, item.nickname || 'Anonim'));
-      meta.appendChild(el('span', null, '·'));
-      meta.appendChild(el('time', null, fmtDate(item.created_at)));
-      if (item.target_alumni) meta.appendChild(el('span', 'tanya-badge', 'Untuk: ' + item.target_alumni));
-      card.appendChild(meta);
-      (item.answers || []).forEach(function(a){
-        var ans = el('div', 'tanya-answer');
-        ans.appendChild(el('p', null, a.answer_text));
-        ans.appendChild(el('small', null, '— ' + (a.answered_by || 'Alumni')));
-        card.appendChild(ans);
-      });
-      feed.appendChild(card);
-    });
-  }
-  if (feed){
-    fetch(SUPA_URL + '/rest/v1/questions?status=eq.approved&select=*,answers(*)&order=created_at.desc', { headers: apiHeaders(false) })
-      .then(function(res){ if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
-      .then(renderFeed)
-      .catch(function(){
-        feed.innerHTML = '';
-        feed.appendChild(el('p', 'tanya-empty', 'Gagal memuat pertanyaan. Coba muat ulang halaman.'));
-      });
-  }
+  loadFeed();
 })();
 </script>
 
